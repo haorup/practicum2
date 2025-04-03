@@ -1,0 +1,222 @@
+[
+  {
+    "username": "john_doe",
+    "password": "hashedPassword123",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@university.edu",
+    "dob": "1995-05-15",
+    "userID": 1001,
+    "role": "STUDENT",
+    "lastActivity": "2023-11-05T14:30:22Z"
+  },
+  {
+    "username": "emma_smith",
+    "password": "hashedPassword456",
+    "firstName": "Emma",
+    "lastName": "Smith",
+    "email": "emma.smith@university.edu",
+    "dob": "1994-09-23",
+    "userID": 1002,
+    "role": "STUDENT",
+    "lastActivity": "2023-11-06T10:15:45Z"
+  },
+  {
+    "username": "prof_williams",
+    "password": "hashedPassword789",
+    "firstName": "Robert",
+    "lastName": "Williams",
+    "email": "r.williams@university.edu",
+    "dob": "1975-07-18",
+    "userID": 2001,
+    "role": "FACULTY",
+    "lastActivity": "2023-11-05T16:45:10Z"
+  },
+  {
+    "username": "admin_johnson",
+    "password": "hashedPasswordAdm",
+    "firstName": "Patricia",
+    "lastName": "Johnson",
+    "email": "p.johnson@university.edu",
+    "dob": "1980-12-10",
+    "userID": 3001,
+    "role": "ADMIN",
+    "lastActivity": "2023-11-06T09:30:00Z"
+  },
+  {
+    "username": "sarah_miller",
+    "password": "hashedPassword321",
+    "firstName": "Sarah",
+    "lastName": "Miller",
+    "email": "s.miller@university.edu",
+    "dob": "1997-03-28",
+    "userID": 1003,
+    "role": "STUDENT",
+    "lastActivity": "2023-11-04T18:22:15Z"
+  },
+  {
+    "username": "david_brown",
+    "password": "hashedPassword654",
+    "firstName": "David",
+    "lastName": "Brown",
+    "email": "d.brown@university.edu",
+    "dob": "1996-11-15",
+    "userID": 1004,
+    "role": "STUDENT",
+    "lastActivity": "2023-11-05T20:10:05Z"
+  },
+  {
+    "username": "prof_davis",
+    "password": "hashedPassword987",
+    "firstName": "Jennifer",
+    "lastName": "Davis",
+    "email": "j.davis@university.edu",
+    "dob": "1978-04-22",
+    "userID": 2002,
+    "role": "FACULTY",
+    "lastActivity": "2023-11-06T14:15:30Z"
+  },
+  {
+    "username": "michelle_wilson",
+    "password": "hashedPasswordMw",
+    "firstName": "Michelle",
+    "lastName": "Wilson",
+    "email": "m.wilson@university.edu",
+    "dob": "1994-02-14",
+    "userID": 1005,
+    "role": "STUDENT",
+    "lastActivity": "2023-11-05T11:45:22Z"
+  },
+  {
+    "username": "james_taylor",
+    "password": "hashedPasswordJt",
+    "firstName": "James",
+    "lastName": "Taylor",
+    "email": "j.taylor@university.edu",
+    "dob": "1993-06-30",
+    "userID": 1006,
+    "role": "STUDENT",
+    "lastActivity": "2023-11-06T08:30:15Z"
+  },
+  {
+    "username": "prof_martin",
+    "password": "hashedPasswordPm",
+    "firstName": "Richard",
+    "lastName": "Martin",
+    "email": "r.martin@university.edu",
+    "dob": "1970-01-25",
+    "userID": 2003,
+    "role": "FACULTY",
+    "lastActivity": "2023-11-05T15:20:45Z"
+  },
+  {
+    "username": "admin_garcia",
+    "password": "hashedPasswordAg",
+    "firstName": "Maria",
+    "lastName": "Garcia",
+    "email": "m.garcia@university.edu",
+    "dob": "1983-08-12",
+    "userID": 3002,
+    "role": "ADMIN",
+    "lastActivity": "2023-11-06T11:10:00Z"
+  },
+  {
+    "username": "elizabeth_harris",
+    "password": "hashedPasswordEh",
+    "firstName": "Elizabeth",
+    "lastName": "Harris",
+    "email": "e.harris@university.edu",
+    "dob": "1998-09-05",
+    "userID": 1007,
+    "role": "STUDENT",
+    "lastActivity": "2023-11-04T19:35:10Z"
+  },
+  {
+    "username": "michael_clark",
+    "password": "hashedPasswordMc",
+    "firstName": "Michael",
+    "lastName": "Clark",
+    "email": "m.clark@university.edu",
+    "dob": "1995-12-03",
+    "userID": 1008,
+    "role": "STUDENT",
+    "lastActivity": "2023-11-05T22:05:30Z"
+  },
+  {
+    "username": "prof_robinson",
+    "password": "hashedPasswordRob",
+    "firstName": "Susan",
+    "lastName": "Robinson",
+    "email": "s.robinson@university.edu",
+    "dob": "1972-10-18",
+    "userID": 2004,
+    "role": "FACULTY",
+    "lastActivity": "2023-11-06T13:25:40Z"
+  },
+  {
+    "username": "thomas_wright",
+    "password": "hashedPasswordTw",
+    "firstName": "Thomas",
+    "lastName": "Wright",
+    "email": "t.wright@university.edu",
+    "dob": "1996-07-22",
+    "userID": 1009,
+    "role": "STUDENT",
+    "lastActivity": "2023-11-05T12:50:15Z"
+  },
+  {
+    "username": "lisa_hall",
+    "password": "hashedPasswordLh",
+    "firstName": "Lisa",
+    "lastName": "Hall",
+    "email": "l.hall@university.edu",
+    "dob": "1997-04-11",
+    "userID": 1010,
+    "role": "STUDENT",
+    "lastActivity": "2023-11-04T16:40:22Z"
+  },
+  {
+    "username": "prof_adams",
+    "password": "hashedPasswordAda",
+    "firstName": "Charles",
+    "lastName": "Adams",
+    "email": "c.adams@university.edu",
+    "dob": "1968-03-15",
+    "userID": 2005,
+    "role": "FACULTY",
+    "lastActivity": "2023-11-05T17:35:10Z"
+  },
+  {
+    "username": "karen_young",
+    "password": "hashedPasswordKy",
+    "firstName": "Karen",
+    "lastName": "Young",
+    "email": "k.young@university.edu",
+    "dob": "1994-10-30",
+    "userID": 1011,
+    "role": "STUDENT",
+    "lastActivity": "2023-11-06T09:10:25Z"
+  },
+  {
+    "username": "daniel_allen",
+    "password": "hashedPasswordDa",
+    "firstName": "Daniel",
+    "lastName": "Allen",
+    "email": "d.allen@university.edu",
+    "dob": "1995-08-17",
+    "userID": 1012,
+    "role": "STUDENT",
+    "lastActivity": "2023-11-05T21:15:05Z"
+  },
+  {
+    "username": "admin_evans",
+    "password": "hashedPasswordEva",
+    "firstName": "William",
+    "lastName": "Evans",
+    "email": "w.evans@university.edu",
+    "dob": "1981-05-05",
+    "userID": 3003,
+    "role": "ADMIN",
+    "lastActivity": "2023-11-06T10:45:30Z"
+  }
+]

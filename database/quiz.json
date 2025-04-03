@@ -1,0 +1,1213 @@
+[{
+  "title": "EXAM 1 FA 23",
+  "description": "",
+  "type": "Graded Quiz",
+  "points": 80,
+  "timeLimit": 60,
+  "assignmentGroup": "EXAMS",
+  "browserRequired": false,
+  "webcamRequired": false,
+  "availableFrom": "Oct 26 at 5:30pm",
+  "availableUntil": "Oct 26 at 7pm",
+  "due": "Oct 26 at 7pm",
+  "questionsNum": 4,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "20",
+      "questionContent": "What is the capital of America?",
+      "options": [
+        "Paris",
+        "Beijing",
+        "Washington"
+      ],
+      "CorrectAns": "Washington",
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 2,
+      "questionType": "Fill in Blank",
+      "questionPoints": "20",
+      "questionContent": "What is your favorite food?",
+      "CorrectAns": [
+        "pizza",
+        "dumplings",
+        "pasta",
+        "steak"
+      ],
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 3,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus two equals four",
+      "CorrectAns": true,
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 4,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus one equals four",
+      "CorrectAns": false,
+      "questionDifficulty": "easy"
+    }
+  ],
+  "courses": "RS101",
+  "howManyAttempts": 0,
+  "published": true
+},
+{
+  "title": "Q3 - JS, ES6",
+  "description": "",
+  "type": "Graded Quiz",
+  "points": 80,
+  "timeLimit": 30,
+  "assignmentGroup": "QUIZZES",
+  "browserRequired": false,
+  "webcamRequired": false,
+  "availableFrom": "",
+  "availableUntil": "",
+  "due": "Multiple Dates",
+  "questionsNum": 4,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "20",
+      "questionContent": "What is the capital of America?",
+      "options": [
+        "Paris",
+        "Beijing",
+        "Washington"
+      ],
+      "CorrectAns": "Washington",
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 2,
+      "questionType": "Fill in Blank",
+      "questionPoints": "20",
+      "questionContent": "What is your favorite food?",
+      "CorrectAns": [
+        "pizza",
+        "dumplings",
+        "pasta",
+        "steak"
+      ],
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 3,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus two equals four",
+      "CorrectAns": true,
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 4,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus one equals four",
+      "CorrectAns": false,
+      "questionDifficulty": "easy"
+    }
+  ],
+  "courses": "RS101",
+  "howManyAttempts": 0,
+  "published": true
+},
+{
+  "title": "Q2 - CSS",
+  "description": "",
+  "type": "Graded Quiz",
+  "points": 80,
+  "timeLimit": 30,
+  "assignmentGroup": "QUIZZES",
+  "browserRequired": false,
+  "webcamRequired": false,
+  "availableFrom": "Oct 5 at 10am",
+  "availableUntil": "Oct 5 at 1pm",
+  "due": "Oct 5 at 1pm",
+  "questionsNum": 4,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "20",
+      "questionContent": "What is the capital of America?",
+      "options": [
+        "Paris",
+        "Beijing",
+        "Washington"
+      ],
+      "CorrectAns": "Washington",
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 2,
+      "questionType": "Fill in Blank",
+      "questionPoints": "20",
+      "questionContent": "What is your favorite food?",
+      "CorrectAns": [
+        "pizza",
+        "dumplings",
+        "pasta",
+        "steak"
+      ],
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 3,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus two equals four",
+      "CorrectAns": true,
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 4,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus one equals four",
+      "CorrectAns": false,
+      "questionDifficulty": "easy"
+    }
+  ],
+  "courses": "RS101",
+  "howManyAttempts": 0,
+  "published": true
+},
+{
+  "title": "Q1 - HTML",
+  "description": "",
+  "type": "Graded Quiz",
+  "points": 80,
+  "timeLimit": 30,
+  "assignmentGroup": "QUIZZES",
+  "howManyAttempts": 0,
+  "browserRequired": false,
+  "webcamRequired": false,
+  "availableFrom": "Sep 21 at 11:40am",
+  "availableUntil": "Sep 21 at 1pm",
+  "due": "Sep 21 at 1pm",
+  "questionsNum": 4,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "20",
+      "questionContent": "What is the capital of America?",
+      "options": [
+        "Paris",
+        "Beijing",
+        "Washington"
+      ],
+      "CorrectAns": "Washington",
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 2,
+      "questionType": "Fill in Blank",
+      "questionPoints": "20",
+      "questionContent": "What is your favorite food?",
+      "CorrectAns": [
+        "pizza",
+        "dumplings",
+        "pasta",
+        "steak"
+      ],
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 3,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus two equals four",
+      "CorrectAns": true,
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 4,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus one equals four",
+      "CorrectAns": false,
+      "questionDifficulty": "easy"
+    }
+  ],
+  "courses": "RS101",
+  "published": false
+},
+{
+  "title": "Q3",
+  "description": "",
+  "type": "Graded Quiz",
+  "points": 80,
+  "timeLimit": 30,
+  "assignmentGroup": "QUIZZES",
+  "browserRequired": false,
+  "webcamRequired": false,
+  "availableFrom": "",
+  "availableUntil": "",
+  "due": "Multiple Dates",
+  "questionsNum": 4,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "20",
+      "questionContent": "What is the capital of America?",
+      "options": [
+        "Paris",
+        "Beijing",
+        "Washington"
+      ],
+      "CorrectAns": "Washington",
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 2,
+      "questionType": "Fill in Blank",
+      "questionPoints": "20",
+      "questionContent": "What is your favorite food?",
+      "CorrectAns": [
+        "pizza",
+        "dumplings",
+        "pasta",
+        "steak"
+      ],
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 3,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus two equals four",
+      "CorrectAns": true,
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 4,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus one equals four",
+      "CorrectAns": false,
+      "questionDifficulty": "easy"
+    }
+  ],
+  "courses": "RS102",
+  "howManyAttempts": 0,
+  "published": false
+},
+{
+  "title": "EXAM 2 FA23",
+  "description": "",
+  "type": "Graded Quiz",
+  "points": 80,
+  "timeLimit": 60,
+  "assignmentGroup": "EXAMS",
+  "browserRequired": false,
+  "webcamRequired": false,
+  "availableFrom": "Dec 15 at 9am",
+  "availableUntil": "Dec 15 at 10:30am",
+  "due": "Dec 15 at 10:30am",
+  "questionsNum": 4,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "20",
+      "questionContent": "What is the capital of America?",
+      "options": [
+        "Paris",
+        "Beijing",
+        "Washington"
+      ],
+      "CorrectAns": "Washington",
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 2,
+      "questionType": "Fill in Blank",
+      "questionPoints": "20",
+      "questionContent": "What is your favorite food?",
+      "CorrectAns": [
+        "pizza",
+        "dumplings",
+        "pasta",
+        "steak"
+      ],
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 3,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus two equals four",
+      "CorrectAns": true,
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 4,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus one equals four",
+      "CorrectAns": false,
+      "questionDifficulty": "easy"
+    }
+  ],
+  "courses": "RS102",
+  "howManyAttempts": 0,
+  "published": false
+},
+{
+  "title": "Q4 - NODE",
+  "description": "",
+  "type": "Graded Quiz",
+  "points": 80,
+  "timeLimit": 30,
+  "assignmentGroup": "QUIZZES",
+  "browserRequired": false,
+  "webcamRequired": false,
+  "availableFrom": "",
+  "availableUntil": "",
+  "due": "Nov 20 at 3pm",
+  "questionsNum": 4,
+  "questions": [
+    {
+      "questionType": "Multiple Choice",
+      "questionPoints": "20",
+      "questionContent": "What is the capital of America?",
+      "options": [
+        "Paris",
+        "Beijing",
+        "Washington"
+      ],
+      "CorrectAns": "Washington",
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionType": "Fill in Blank",
+      "questionPoints": "20",
+      "questionContent": "What is your favorite food?",
+      "CorrectAns": [
+        "pizza",
+        "dumplings",
+        "pasta",
+        "steak"
+      ],
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus two equals four",
+      "CorrectAns": true,
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus one equals four",
+      "CorrectAns": false,
+      "questionDifficulty": "easy"
+    }
+  ],
+  "courses": "RS102",
+  "howManyAttempts": 0,
+  "published": false
+},
+{
+  "title": "Q5 - MONGO",
+  "description": "",
+  "type": "Graded Quiz",
+  "points": 80,
+  "timeLimit": 30,
+  "assignmentGroup": "QUIZZES",
+  "browserRequired": false,
+  "webcamRequired": false,
+  "availableFrom": "Nov 30 at 11:40am",
+  "availableUntil": "Nov 30 at 3pm",
+  "due": "Nov 30 at 3pm",
+  "questionsNum": 4,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "20",
+      "questionContent": "What is the capital of America?",
+      "options": [
+        "Paris",
+        "Beijing",
+        "Washington"
+      ],
+      "CorrectAns": "Washington",
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 2,
+      "questionType": "Fill in Blank",
+      "questionPoints": "20",
+      "questionContent": "What is your favorite food?",
+      "CorrectAns": [
+        "pizza",
+        "dumplings",
+        "pasta",
+        "steak"
+      ],
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 3,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus two equals four",
+      "CorrectAns": true,
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 4,
+      "questionType": "True/False",
+      "questionPoints": "20",
+      "questionContent": "Two plus one equals four",
+      "CorrectAns": false,
+      "questionDifficulty": "easy"
+    }
+  ],
+  "courses": "RS102",
+  "howManyAttempts": 0,
+  "published": false
+},
+{
+  "title": "Quantum Mechanics Basics Quiz",
+  "description": "Test your understanding of fundamental quantum mechanics concepts",
+  "type": "Graded Quiz",
+  "points": 50,
+  "timeLimit": 45,
+  "assignmentGroup": "QUIZZES",
+  "browserRequired": true,
+  "webcamRequired": true,
+  "availableFrom": "Feb 15 at 9:00am",
+  "availableUntil": "Feb 15 at 10:30am",
+  "due": "Feb 15 at 10:30am",
+  "questionsNum": 5,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "10",
+      "questionContent": "Which of the following best describes quantum superposition?",
+      "options": [
+        "A quantum system can only be in one state at a time",
+        "A quantum system can exist in multiple states simultaneously",
+        "A quantum system can only be measured with absolute precision"
+      ],
+      "CorrectAns": "A quantum system can exist in multiple states simultaneously",
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 2,
+      "questionType": "True/False",
+      "questionPoints": "10",
+      "questionContent": "Heisenberg's uncertainty principle states that we can precisely measure both the position and momentum of a particle simultaneously.",
+      "CorrectAns": false,
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 3,
+      "questionType": "Multiple Choice",
+      "questionPoints": "10",
+      "questionContent": "What is a qubit?",
+      "options": [
+        "A classical bit that can only be 0 or 1",
+        "A quantum bit that can exist in superposition of states",
+        "A unit of quantum energy"
+      ],
+      "CorrectAns": "A quantum bit that can exist in superposition of states",
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 4,
+      "questionType": "Fill in Blank",
+      "questionPoints": "10",
+      "questionContent": "The phenomenon where two or more particles become correlated so that the quantum state of each particle cannot be described independently is called quantum ___________.",
+      "CorrectAns": [
+        "entanglement"
+      ],
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 5,
+      "questionType": "Multiple Choice",
+      "questionPoints": "10",
+      "questionContent": "Which quantum algorithm is primarily used for integer factorization?",
+      "options": [
+        "Grover's algorithm",
+        "Shor's algorithm",
+        "Deutsch-Jozsa algorithm"
+      ],
+      "CorrectAns": "Shor's algorithm",
+      "questionDifficulty": "hard"
+    }
+  ],
+  "courses": "CS4500",
+  "howManyAttempts": 0,
+  "published": true
+},
+{
+  "title": "Quantum Circuits Midterm Exam",
+  "description": "Comprehensive evaluation of quantum circuit design principles",
+  "type": "Graded Quiz",
+  "points": 100,
+  "timeLimit": 90,
+  "assignmentGroup": "EXAMS",
+  "browserRequired": true,
+  "webcamRequired": true,
+  "availableFrom": "Mar 20 at 1:00pm",
+  "availableUntil": "Mar 20 at 3:00pm",
+  "due": "Mar 20 at 3:00pm",
+  "questionsNum": 6,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "15",
+      "questionContent": "Which gate performs a quantum NOT operation?",
+      "options": [
+        "Hadamard gate",
+        "Pauli-X gate",
+        "CNOT gate"
+      ],
+      "CorrectAns": "Pauli-X gate",
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 2,
+      "questionType": "True/False",
+      "questionPoints": "15",
+      "questionContent": "The Hadamard gate creates superposition from a basis state.",
+      "CorrectAns": true,
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 3,
+      "questionType": "Fill in Blank",
+      "questionPoints": "20",
+      "questionContent": "A quantum circuit that can factor large numbers exponentially faster than classical computers implements ________'s algorithm.",
+      "CorrectAns": [
+        "Shor",
+        "Shor's"
+      ],
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 4,
+      "questionType": "Multiple Choice",
+      "questionPoints": "15",
+      "questionContent": "What is the primary challenge in scaling quantum computers?",
+      "options": [
+        "Cooling requirements",
+        "Quantum decoherence",
+        "Size of quantum gates"
+      ],
+      "CorrectAns": "Quantum decoherence",
+      "questionDifficulty": "hard"
+    },
+    {
+      "questionId": 5,
+      "questionType": "True/False",
+      "questionPoints": "15",
+      "questionContent": "Quantum teleportation allows for faster-than-light communication.",
+      "CorrectAns": false,
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 6,
+      "questionType": "Fill in Blank",
+      "questionPoints": "20",
+      "questionContent": "The minimum number of qubits needed to implement a simple quantum error correction code is _____.",
+      "CorrectAns": [
+        "5",
+        "five"
+      ],
+      "questionDifficulty": "hard"
+    }
+  ],
+  "courses": "CS4500",
+  "howManyAttempts": 0,
+  "published": true
+},
+{
+  "title": "Quantum Error Correction Quiz",
+  "description": "Assessment on quantum error detection and correction methods",
+  "type": "Graded Quiz",
+  "points": 75,
+  "timeLimit": 60,
+  "assignmentGroup": "QUIZZES",
+  "browserRequired": false,
+  "webcamRequired": false,
+  "availableFrom": "Apr 10 at 8:00am",
+  "availableUntil": "Apr 10 at 11:59pm",
+  "due": "Apr 10 at 11:59pm",
+  "questionsNum": 4,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "20",
+      "questionContent": "Which of the following is NOT a common type of quantum error?",
+      "options": [
+        "Bit flip",
+        "Phase flip",
+        "Memory leak"
+      ],
+      "CorrectAns": "Memory leak",
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 2,
+      "questionType": "True/False",
+      "questionPoints": "15",
+      "questionContent": "The Shor code can correct both bit flip and phase flip errors.",
+      "CorrectAns": true,
+      "questionDifficulty": "hard"
+    },
+    {
+      "questionId": 3,
+      "questionType": "Fill in Blank",
+      "questionPoints": "20",
+      "questionContent": "The smallest quantum error correction code that can detect and correct a single arbitrary error is the ___-qubit code.",
+      "CorrectAns": [
+        "5",
+        "five"
+      ],
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 4,
+      "questionType": "Multiple Choice",
+      "questionPoints": "20",
+      "questionContent": "What is the primary purpose of a stabilizer code in quantum error correction?",
+      "options": [
+        "To increase quantum coherence time",
+        "To detect errors without collapsing quantum states",
+        "To eliminate the need for quantum gates"
+      ],
+      "CorrectAns": "To detect errors without collapsing quantum states",
+      "questionDifficulty": "hard"
+    }
+  ],
+  "courses": "CS4500",
+  "howManyAttempts": 0,
+  "published": true
+},
+{
+  "title": "Quantum Computing Final Exam",
+  "description": "Comprehensive assessment of quantum computing knowledge",
+  "type": "Graded Quiz",
+  "points": 200,
+  "timeLimit": 180,
+  "assignmentGroup": "EXAMS",
+  "browserRequired": true,
+  "webcamRequired": true,
+  "availableFrom": "May 15 at 9:00am",
+  "availableUntil": "May 15 at 12:00pm",
+  "due": "May 15 at 12:00pm",
+  "questionsNum": 8,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "25",
+      "questionContent": "Which quantum algorithm provides a quadratic speedup for unstructured search problems?",
+      "options": [
+        "Shor's algorithm",
+        "Grover's algorithm",
+        "Deutsch-Jozsa algorithm"
+      ],
+      "CorrectAns": "Grover's algorithm",
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 2,
+      "questionType": "True/False",
+      "questionPoints": "25",
+      "questionContent": "Quantum computers can solve all NP-complete problems in polynomial time.",
+      "CorrectAns": false,
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 3,
+      "questionType": "Fill in Blank",
+      "questionPoints": "25",
+      "questionContent": "The quantum computing model that uses measurement as the primary computational resource is called ________-based quantum computing.",
+      "CorrectAns": [
+        "measurement",
+        "MBQC"
+      ],
+      "questionDifficulty": "hard"
+    },
+    {
+      "questionId": 4,
+      "questionType": "Multiple Choice",
+      "questionPoints": "25",
+      "questionContent": "Which physical implementation of qubits currently holds the record for the most qubits in a quantum processor?",
+      "options": [
+        "Superconducting qubits",
+        "Trapped ions",
+        "Photonic qubits"
+      ],
+      "CorrectAns": "Superconducting qubits",
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 5,
+      "questionType": "True/False",
+      "questionPoints": "25",
+      "questionContent": "The no-cloning theorem states that it is impossible to create an identical copy of an arbitrary unknown quantum state.",
+      "CorrectAns": true,
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 6,
+      "questionType": "Multiple Choice",
+      "questionPoints": "25",
+      "questionContent": "Which quantum computing application is expected to have the most significant impact on cryptography?",
+      "options": [
+        "Quantum machine learning",
+        "Quantum simulation",
+        "Integer factorization"
+      ],
+      "CorrectAns": "Integer factorization",
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 7,
+      "questionType": "Fill in Blank",
+      "questionPoints": "25",
+      "questionContent": "A quantum algorithm that can estimate the eigenvalues of a unitary operator is known as ________'s algorithm.",
+      "CorrectAns": [
+        "Phase estimation",
+        "Quantum phase estimation"
+      ],
+      "questionDifficulty": "hard"
+    },
+    {
+      "questionId": 8,
+      "questionType": "Multiple Choice",
+      "questionPoints": "25",
+      "questionContent": "What is the main advantage of topological quantum computing?",
+      "options": [
+        "Faster computation speed",
+        "Inherent error resistance",
+        "Lower energy requirements"
+      ],
+      "CorrectAns": "Inherent error resistance",
+      "questionDifficulty": "hard"
+    }
+  ],
+  "courses": "CS4500",
+  "howManyAttempts": 0,
+  "published": false
+},
+{
+  "title": "Ancient Hydraulic Systems Quiz",
+  "description": "Assessment of knowledge on ancient water management technologies",
+  "type": "Graded Quiz",
+  "points": 50,
+  "timeLimit": 45,
+  "assignmentGroup": "QUIZZES",
+  "browserRequired": false,
+  "webcamRequired": false,
+  "availableFrom": "Jan 25 at 10:00am",
+  "availableUntil": "Jan 25 at 11:30am",
+  "due": "Jan 25 at 11:30am",
+  "questionsNum": 5,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "10",
+      "questionContent": "Which ancient civilization developed the qanat underground water management system?",
+      "options": [
+        "Roman",
+        "Persian",
+        "Egyptian"
+      ],
+      "CorrectAns": "Persian",
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 2,
+      "questionType": "True/False",
+      "questionPoints": "10",
+      "questionContent": "The Archimedes screw was primarily used for irrigation in ancient Egypt.",
+      "CorrectAns": true,
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 3,
+      "questionType": "Fill in Blank",
+      "questionPoints": "10",
+      "questionContent": "The ancient water management system of stepwells was primarily developed in ______ (country).",
+      "CorrectAns": [
+        "India"
+      ],
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 4,
+      "questionType": "Multiple Choice",
+      "questionPoints": "10",
+      "questionContent": "Which of the following was NOT a primary purpose of Roman aqueducts?",
+      "options": [
+        "Supplying drinking water",
+        "Filling public baths",
+        "Generating electricity"
+      ],
+      "CorrectAns": "Generating electricity",
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 5,
+      "questionType": "True/False",
+      "questionPoints": "10",
+      "questionContent": "The shaduf water lifting device originated in Mesopotamia.",
+      "CorrectAns": true,
+      "questionDifficulty": "medium"
+    }
+  ],
+  "courses": "ENG303",
+  "howManyAttempts": 0,
+  "published": true
+},
+{
+  "title": "Ancient Dam Construction Midterm",
+  "description": "Comprehensive exam on ancient dam engineering principles",
+  "type": "Graded Quiz",
+  "points": 100,
+  "timeLimit": 90,
+  "assignmentGroup": "EXAMS",
+  "browserRequired": true,
+  "webcamRequired": true,
+  "availableFrom": "Feb 28 at 1:00pm",
+  "availableUntil": "Feb 28 at 3:00pm",
+  "due": "Feb 28 at 3:00pm",
+  "questionsNum": 6,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "15",
+      "questionContent": "What was the primary building material used in the ancient Sadd el-Kafara dam in Egypt?",
+      "options": [
+        "Concrete",
+        "Rubble masonry with stone facing",
+        "Wood and clay"
+      ],
+      "CorrectAns": "Rubble masonry with stone facing",
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 2,
+      "questionType": "True/False",
+      "questionPoints": "15",
+      "questionContent": "The Dujiangyan irrigation system in China was built during the Qin Dynasty and is still in operation today.",
+      "CorrectAns": true,
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 3,
+      "questionType": "Fill in Blank",
+      "questionPoints": "20",
+      "questionContent": "The oldest known dam in the world is the Jawa Dam located in modern-day ______.",
+      "CorrectAns": [
+        "Jordan"
+      ],
+      "questionDifficulty": "hard"
+    },
+    {
+      "questionId": 4,
+      "questionType": "Multiple Choice",
+      "questionPoints": "15",
+      "questionContent": "Which hydraulic engineering principle did Yu the Great primarily employ for flood control in ancient China?",
+      "options": [
+        "Building high dams",
+        "Dredging and diversion channels",
+        "Underground storage reservoirs"
+      ],
+      "CorrectAns": "Dredging and diversion channels",
+      "questionDifficulty": "hard"
+    },
+    {
+      "questionId": 5,
+      "questionType": "True/False",
+      "questionPoints": "15",
+      "questionContent": "Roman dam construction typically included buttressing on the downstream side.",
+      "CorrectAns": true,
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 6,
+      "questionType": "Fill in Blank",
+      "questionPoints": "20",
+      "questionContent": "The ancient ______ civilization built a sophisticated dam and reservoir system at Marib.",
+      "CorrectAns": [
+        "Sabaean",
+        "Yemeni"
+      ],
+      "questionDifficulty": "hard"
+    }
+  ],
+  "courses": "ENG303",
+  "howManyAttempts": 0,
+  "published": true
+},
+{
+  "title": "Irrigation Systems Comparison Quiz",
+  "description": "Assessment on different ancient irrigation technologies",
+  "type": "Graded Quiz",
+  "points": 75,
+  "timeLimit": 60,
+  "assignmentGroup": "QUIZZES",
+  "browserRequired": false,
+  "webcamRequired": false,
+  "availableFrom": "Mar 15 at 2:00pm",
+  "availableUntil": "Mar 15 at 3:30pm",
+  "due": "Mar 15 at 3:30pm",
+  "questionsNum": 5,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "15",
+      "questionContent": "Which irrigation technique was most commonly used in ancient Mesopotamia?",
+      "options": [
+        "Drip irrigation",
+        "Basin irrigation",
+        "Sprinkler systems"
+      ],
+      "CorrectAns": "Basin irrigation",
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 2,
+      "questionType": "True/False",
+      "questionPoints": "15",
+      "questionContent": "The Nilometer was used in ancient Egypt to measure the height of annual Nile floods for irrigation planning.",
+      "CorrectAns": true,
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 3,
+      "questionType": "Fill in Blank",
+      "questionPoints": "15",
+      "questionContent": "The ancient Nabataean civilization developed sophisticated water collection and irrigation systems in the city of ______.",
+      "CorrectAns": [
+        "Petra"
+      ],
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 4,
+      "questionType": "Multiple Choice",
+      "questionPoints": "15",
+      "questionContent": "Which ancient civilization developed terrace farming with sophisticated irrigation systems?",
+      "options": [
+        "Inca",
+        "Greek",
+        "Babylonian"
+      ],
+      "CorrectAns": "Inca",
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 5,
+      "questionType": "True/False",
+      "questionPoints": "15",
+      "questionContent": "The spate irrigation system, which uses seasonal flood waters for agriculture, originated in ancient Yemen.",
+      "CorrectAns": true,
+      "questionDifficulty": "hard"
+    }
+  ],
+  "courses": "ENG303",
+  "howManyAttempts": 0,
+  "published": true
+},
+{
+  "title": "Water Lifting Devices Quiz",
+  "description": "Test on ancient mechanical water lifting technologies",
+  "type": "Graded Quiz",
+  "points": 60,
+  "timeLimit": 45,
+  "assignmentGroup": "QUIZZES",
+  "browserRequired": false,
+  "webcamRequired": false,
+  "availableFrom": "Apr 5 at 9:00am",
+  "availableUntil": "Apr 5 at 10:30am",
+  "due": "Apr 5 at 10:30am",
+  "questionsNum": 4,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "15",
+      "questionContent": "Which ancient water lifting device consists of pots attached to a wheel?",
+      "options": [
+        "Shaduf",
+        "Archimedes screw",
+        "Noria"
+      ],
+      "CorrectAns": "Noria",
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 2,
+      "questionType": "True/False",
+      "questionPoints": "15",
+      "questionContent": "The saqiya water lifting device was powered by animals walking in circles.",
+      "CorrectAns": true,
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 3,
+      "questionType": "Fill in Blank",
+      "questionPoints": "15",
+      "questionContent": "The ______ is a water lifting device consisting of a long pole with a counterweight on one end and a bucket on the other.",
+      "CorrectAns": [
+        "shaduf",
+        "shadoof"
+      ],
+      "questionDifficulty": "easy"
+    },
+    {
+      "questionId": 4,
+      "questionType": "Multiple Choice",
+      "questionPoints": "15",
+      "questionContent": "Which civilization is credited with the first widespread use of the waterwheel for lifting water?",
+      "options": [
+        "Roman",
+        "Greek",
+        "Persian"
+      ],
+      "CorrectAns": "Roman",
+      "questionDifficulty": "hard"
+    }
+  ],
+  "courses": "ENG303",
+  "howManyAttempts": 0,
+  "published": true
+},
+{
+  "title": "Ancient Hydraulic Engineering Final Exam",
+  "description": "Comprehensive assessment of ancient water management systems",
+  "type": "Graded Quiz",
+  "points": 200,
+  "timeLimit": 180,
+  "assignmentGroup": "EXAMS",
+  "browserRequired": true,
+  "webcamRequired": true,
+  "availableFrom": "May 10 at 9:00am",
+  "availableUntil": "May 10 at 12:00pm",
+  "due": "May 10 at 12:00pm",
+  "questionsNum": 8,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionType": "Multiple Choice",
+      "questionPoints": "25",
+      "questionContent": "Which ancient civilization first implemented a public water distribution system with pressurized pipes?",
+      "options": [
+        "Egyptian",
+        "Roman",
+        "Chinese"
+      ],
+      "CorrectAns": "Roman",
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 2,
+      "questionType": "True/False",
+      "questionPoints": "25",
+      "questionContent": "The ancient Chinese used bamboo pipes for water distribution before the invention of clay or metal pipes.",
+      "CorrectAns": true,
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 3,
+      "questionType": "Fill in Blank",
+      "questionPoints": "25",
+      "questionContent": "The ancient water management technique of ______ involves diverting water from a river to create artificial flooding for agriculture.",
+      "CorrectAns": [
+        "basin irrigation",
+        "flood irrigation"
+      ],
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 4,
+      "questionType": "Multiple Choice",
+      "questionPoints": "25",
+      "questionContent": "What material did the Romans typically use for water pipes in their aqueduct systems?",
+      "options": [
+        "Clay",
+        "Lead",
+        "Stone"
+      ],
+      "CorrectAns": "Lead",
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 5,
+      "questionType": "True/False",
+      "questionPoints": "25",
+      "questionContent": "The Minoan civilization on Crete developed the first flush toilet systems in history.",
+      "CorrectAns": true,
+      "questionDifficulty": "hard"
+    },
+    {
+      "questionId": 6,
+      "questionType": "Multiple Choice",
+      "questionPoints": "25",
+      "questionContent": "Which ancient dam is considered the oldest arch dam in the world?",
+      "options": [
+        "Marib Dam",
+        "Jawa Dam",
+        "Kebar Dam"
+      ],
+      "CorrectAns": "Kebar Dam",
+      "questionDifficulty": "hard"
+    },
+    {
+      "questionId": 7,
+      "questionType": "Fill in Blank",
+      "questionPoints": "25",
+      "questionContent": "The ancient water management concept of ______ involves managing rainwater where it falls rather than allowing runoff.",
+      "CorrectAns": [
+        "water harvesting",
+        "rainwater harvesting"
+      ],
+      "questionDifficulty": "medium"
+    },
+    {
+      "questionId": 8,
+      "questionType": "Multiple Choice",
+      "questionPoints": "25",
+      "questionContent": "Which hydraulic principle was most commonly used in ancient Roman aqueducts?",
+      "options": [
+        "Pressurized flow",
+        "Gravity-fed flow",
+        "Pumped flow"
+      ],
+      "CorrectAns": "Gravity-fed flow",
+      "questionDifficulty": "medium"
+    }
+  ],
+  "courses": "ENG303",
+  "howManyAttempts": 0,
+  "published": false
+}]
