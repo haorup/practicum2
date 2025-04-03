@@ -14,7 +14,7 @@ router.post("/api/courses/:cid/assignment", async (req, res) => {
 });
 
 // Get all assignments
-router.get("/api/courses/:cid/assignments", async (req, res) => {
+router.get("/api/assignments", async (req, res) => {
   try {
     const assignments = await dao.findAllAssignments();
     res.status(200).json(assignments);
