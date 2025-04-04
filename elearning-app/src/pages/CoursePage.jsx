@@ -64,8 +64,8 @@ function CoursePage() {
           <label>Title</label>
           <input
             type="text"
-            name="title"
-            value={currentCourse.title}
+            name="name"
+            value={currentCourse.name}
             onChange={handleInputChange}
             required
           />
@@ -86,13 +86,12 @@ function CoursePage() {
             name="instructor"
             value={currentCourse.instructor}
             onChange={handleInputChange}
-            required
           />
         </div>
         <button type="submit">{editing ? 'Update' : 'Create'}</button>
         {editing && (
           <button type="button" onClick={() => {
-            setCurrentCourse({ title: '', description: '', instructor: '' })
+            setCurrentCourse({ name: '', description: '', instructor: '' })
             setEditing(false)
           }}>Cancel</button>
         )}
@@ -112,7 +111,7 @@ function CoursePage() {
           <tbody>
             {courses.map(course => (
               <tr key={course._id}>
-                <td>{course.title}</td>
+                <td>{course.name}</td>
                 <td>{course.description}</td>
                 <td>{course.instructor}</td>
                 <td>

@@ -107,7 +107,7 @@ function AssignmentPage() {
           <label>Description</label>
           <textarea
             name="description"
-            value={currentAssignment.description}
+            value={currentAssignment.content}
             onChange={handleInputChange}
             required
           />
@@ -132,7 +132,7 @@ function AssignmentPage() {
           >
             <option value="">Select a course</option>
             {courses.map(course => (
-              <option key={course._id} value={course.course_number}>{course.title} ({course.course_number})</option>
+              <option key={course._id} value={course.course_number}>{course.name} ({course.number})</option>
             ))}
           </select>
         </div>
@@ -167,7 +167,6 @@ function AssignmentPage() {
           <thead>
             <tr>
               <th>Title</th>
-              <th>Description</th>
               <th>Due Date</th>
               <th>Course</th>
               <th>Points</th>
@@ -178,7 +177,6 @@ function AssignmentPage() {
             {assignments.map(assignment => (
               <tr key={assignment._id}>
                 <td>{assignment.title}</td>
-                <td>{assignment.description}</td>
                 <td>{new Date(assignment.dueDate).toLocaleDateString()}</td>
                 <td>{assignment.course_number}</td>
                 <td>{assignment.points}</td>

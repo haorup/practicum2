@@ -3,7 +3,7 @@ import { getUsers, createUser, updateUser, deleteUser } from '../services/userSe
 
 function UserPage() {
   const [users, setUsers] = useState([])
-  const [currentUser, setCurrentUser] = useState({ name: '', email: '', role: 'student' })
+  const [currentUser, setCurrentUser] = useState({ firstName: '', lastName: '', email: '', role: 'student' })
   const [editing, setEditing] = useState(false)
 
   useEffect(() => {
@@ -19,6 +19,16 @@ function UserPage() {
     }
   }
 
+  const handleInputFirstName = (e) => {
+    const { value } = e.target
+    setCurrentUser({ ...currentUser, firstName: value })
+  }
+
+  const handleInputLastName = (e) => {
+    const { value } = e.target
+    setCurrentUser({ ...currentUser, lastName: value })
+  }
+
   const handleInputChange = (e) => {
     const { name, value } = e.target
     setCurrentUser({ ...currentUser, [name]: value })
@@ -32,7 +42,7 @@ function UserPage() {
       } else {
         await createUser(currentUser)
       }
-      setCurrentUser({ name: '', email: '', role: 'student' })
+      setCurrentUser({ firstName: '', lastName: '', email: '', role: 'student' })
       setEditing(false)
       fetchUsers()
     } catch (error) {
@@ -61,12 +71,22 @@ function UserPage() {
       <form onSubmit={handleSubmit} className="form">
         <h3>{editing ? 'Edit User' : 'Add New User'}</h3>
         <div className="form-group">
-          <label>Name</label>
+          <label>First Name</label>
           <input
             type="text"
-            name="name"
-            value={currentUser.name}
-            onChange={handleInputChange}
+            name="firstName"
+            value={currentUser.firstName}
+            onChange={handleInputFirstName}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Last Name</label>
+          <input
+            type="text"
+            name="lastName"
+            value={currentUser.lastName}
+            onChange={handleInputLastName}
             required
           />
         </div>
@@ -96,7 +116,7 @@ function UserPage() {
         <button type="submit">{editing ? 'Update' : 'Create'}</button>
         {editing && (
           <button type="button" onClick={() => {
-            setCurrentUser({ name: '', email: '', role: 'student' })
+            setCurrentUser({ firstName: '', lastName: '', email: '', role: 'student' })
             setEditing(false)
           }}>Cancel</button>
         )}

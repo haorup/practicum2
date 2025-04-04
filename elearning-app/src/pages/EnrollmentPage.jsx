@@ -34,7 +34,7 @@ function EnrollmentPage() {
     try {
       const response = await getUsers()
       // Filter for students only
-      const students = response.data.filter(user => user.role === 'student')
+      const students = response.data.filter(user => user.role === 'STUDENT')
       setUsers(students)
     } catch (error) {
       console.error('Error fetching users:', error)
@@ -118,7 +118,7 @@ function EnrollmentPage() {
           >
             <option value="">Select a student</option>
             {users.map(user => (
-              <option key={user._id} value={user._id}>{user.name}</option>
+              <option key={user._id} value={user._id}>{user.firstName +" "+ user.lastName}</option>
             ))}
           </select>
         </div>
@@ -132,7 +132,7 @@ function EnrollmentPage() {
           >
             <option value="">Select a course</option>
             {courses.map(course => (
-              <option key={course._id} value={course._id}>{course.title}</option>
+              <option key={course._id} value={course._id}>{course.name}</option>
             ))}
           </select>
         </div>
