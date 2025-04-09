@@ -3,7 +3,7 @@ import { getUsers, createUser, updateUser, deleteUser } from '../services/userSe
 
 function UserPage() {
   const [users, setUsers] = useState([])
-  const [currentUser, setCurrentUser] = useState({ firstName: '', lastName: '', email: '', role: 'student' })
+  const [currentUser, setCurrentUser] = useState({ firstName: '', lastName: '', email: '', role: 'STUDENT' })
   const [editing, setEditing] = useState(false)
 
   useEffect(() => {
@@ -36,19 +36,30 @@ function UserPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    
     try {
+      // Add required fields for user creation
+      const userToSubmit = {
+        ...currentUser,
+        username: currentUser.email.split('@')[0] || `user_${Date.now()}`,
+        password: 'defaultPassword123',
+        userID: parseInt(Date.now().toString().slice(-9)), // Create numeric ID from timestamp
+        lastActivity: new Date()
+      };
+      
       if (editing) {
-        await updateUser(currentUser._id, currentUser)
+        await updateUser(currentUser._id, userToSubmit);
       } else {
-        await createUser(currentUser)
+        await createUser(userToSubmit);
       }
-      setCurrentUser({ firstName: '', lastName: '', email: '', role: 'student' })
-      setEditing(false)
-      fetchUsers()
+      
+      setCurrentUser({ firstName: '', lastName: '', email: '', role: 'STUDENT' });
+      setEditing(false);
+      fetchUsers();
     } catch (error) {
-      console.error('Error saving user:', error)
+      console.error('Error saving user:', error);
     }
-  }
+  };
 
   const handleEdit = (user) => {
     setCurrentUser(user)
@@ -108,15 +119,17 @@ function UserPage() {
             onChange={handleInputChange}
             required
           >
-            <option value="student">Student</option>
-            <option value="instructor">Instructor</option>
-            <option value="admin">Admin</option>
+            <option value="STUDENT">Student</option>
+            <option value="FACULTY">Faculty</option>
+            <option value="ADMIN">Admin</option>
           </select>
         </div>
-        <button type="submit">{editing ? 'Update' : 'Create'}</button>
+        <button type="submit">
+          {editing ? 'Update' : 'Create'}
+        </button>
         {editing && (
           <button type="button" onClick={() => {
-            setCurrentUser({ firstName: '', lastName: '', email: '', role: 'student' })
+            setCurrentUser({ firstName: '', lastName: '', email: '', role: 'STUDENT' })
             setEditing(false)
           }}>Cancel</button>
         )}

@@ -9,27 +9,27 @@ const questionSchema = new mongoose.Schema({
   questionType: {
     type: String,
     enum: ['Multiple Choice', 'Fill in Blank', 'TrueORFalse'],
-    required: true
+    
   },
   questionPoints: {
     type: String,
-    required: true
+    
   },
   questionContent: {
     type: String,
-    required: true
+    
   },
   options: {
     type: [String]
   },
   CorrectAns: {
     type: mongoose.Schema.Types.Mixed,
-    required: true
+    
   },
   questionDifficulty: {
     type: String,
     enum: ['easy', 'medium', 'hard'],
-    required: true
+    
   }
 });
 
@@ -37,7 +37,7 @@ const questionSchema = new mongoose.Schema({
 const quizSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true
+    
   },
   description: {
     type: String,
@@ -49,16 +49,16 @@ const quizSchema = new mongoose.Schema({
   },
   points: {
     type: Number,
-    required: true
+    
   },
   timeLimit: {
     type: Number,
-    required: true
+    
   },
   assignmentGroup: {
     type: String,
     enum: ['EXAMS', 'QUIZZES'],
-    required: true
+    
   },
   browserRequired: {
     type: Boolean,
@@ -76,19 +76,19 @@ const quizSchema = new mongoose.Schema({
   },
   due: {
     type: String,
-    required: true
+    
   },
   questionsNum: {
     type: Number,
-    required: true
+    
   },
   questions: {
     type: [questionSchema],
-    required: true
+    
   },
   courses: {
     type: String,
-    required: true
+    
   },
   howManyAttempts: {
     type: Number,
@@ -96,7 +96,7 @@ const quizSchema = new mongoose.Schema({
   },
   published: {
     type: Boolean,
-    required: true
+    
   }
 }, { collection: 'quiz' });
 

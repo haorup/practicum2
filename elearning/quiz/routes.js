@@ -8,7 +8,7 @@ router.post("/api/courses/:cid/quizzes", async (req, res) => {
   try {
     const quiz = {
       ...req.body,
-      course_number: req.params.cid
+      courses: req.params.cid  // Changed from course_number to courses to match schema
     };
     const newQuiz = await dao.createQuiz(quiz);
     res.status(201).json(newQuiz);

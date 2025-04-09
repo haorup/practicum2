@@ -7,9 +7,9 @@
   "assignmentGroup": "EXAMS",
   "browserRequired": false,
   "webcamRequired": false,
-  "availableFrom": "Oct 26 at 5:30pm",
-  "availableUntil": "Oct 26 at 7pm",
-  "due": "Oct 26 at 7pm",
+  "availableFrom": "2023-10-26",
+  "availableUntil": "2023-10-26",
+  "due": "2023-10-26",
   "questionsNum": 4,
   "questions": [
     {
@@ -129,9 +129,9 @@
   "assignmentGroup": "QUIZZES",
   "browserRequired": false,
   "webcamRequired": false,
-  "availableFrom": "Oct 5 at 10am",
-  "availableUntil": "Oct 5 at 1pm",
-  "due": "Oct 5 at 1pm",
+  "availableFrom": "2023-10-05",
+  "availableUntil": "2023-10-05",
+  "due": "2023-10-05",
   "questionsNum": 4,
   "questions": [
     {
@@ -191,9 +191,9 @@
   "howManyAttempts": 0,
   "browserRequired": false,
   "webcamRequired": false,
-  "availableFrom": "Sep 21 at 11:40am",
-  "availableUntil": "Sep 21 at 1pm",
-  "due": "Sep 21 at 1pm",
+  "availableFrom": "2023-09-21",
+  "availableUntil": "2023-09-21",
+  "due": "2023-09-21",
   "questionsNum": 4,
   "questions": [
     {
@@ -312,9 +312,9 @@
   "assignmentGroup": "EXAMS",
   "browserRequired": false,
   "webcamRequired": false,
-  "availableFrom": "Dec 15 at 9am",
-  "availableUntil": "Dec 15 at 10:30am",
-  "due": "Dec 15 at 10:30am",
+  "availableFrom": "2023-12-15",
+  "availableUntil": "2023-12-15",
+  "due": "2023-12-15",
   "questionsNum": 4,
   "questions": [
     {
@@ -375,7 +375,7 @@
   "webcamRequired": false,
   "availableFrom": "",
   "availableUntil": "",
-  "due": "Nov 20 at 3pm",
+  "due": "2023-11-20",
   "questionsNum": 4,
   "questions": [
     {
@@ -430,9 +430,9 @@
   "assignmentGroup": "QUIZZES",
   "browserRequired": false,
   "webcamRequired": false,
-  "availableFrom": "Nov 30 at 11:40am",
-  "availableUntil": "Nov 30 at 3pm",
-  "due": "Nov 30 at 3pm",
+  "availableFrom": "2023-11-30",
+  "availableUntil": "2023-11-30",
+  "due": "2023-11-30",
   "questionsNum": 4,
   "questions": [
     {
@@ -491,9 +491,9 @@
   "assignmentGroup": "QUIZZES",
   "browserRequired": true,
   "webcamRequired": true,
-  "availableFrom": "Feb 15 at 9:00am",
-  "availableUntil": "Feb 15 at 10:30am",
-  "due": "Feb 15 at 10:30am",
+  "availableFrom": "2024-02-15",
+  "availableUntil": "2024-02-15",
+  "due": "2024-02-15",
   "questionsNum": 5,
   "questions": [
     {
@@ -567,9 +567,9 @@
   "assignmentGroup": "EXAMS",
   "browserRequired": true,
   "webcamRequired": true,
-  "availableFrom": "Mar 20 at 1:00pm",
-  "availableUntil": "Mar 20 at 3:00pm",
-  "due": "Mar 20 at 3:00pm",
+  "availableFrom": "2024-03-20",
+  "availableUntil": "2024-03-20",
+  "due": "2024-03-20",
   "questionsNum": 6,
   "questions": [
     {
@@ -650,9 +650,9 @@
   "assignmentGroup": "QUIZZES",
   "browserRequired": false,
   "webcamRequired": false,
-  "availableFrom": "Apr 10 at 8:00am",
-  "availableUntil": "Apr 10 at 11:59pm",
-  "due": "Apr 10 at 11:59pm",
+  "availableFrom": "2024-04-10",
+  "availableUntil": "2024-04-10",
+  "due": "2024-04-10",
   "questionsNum": 4,
   "questions": [
     {
@@ -714,9 +714,9 @@
   "assignmentGroup": "EXAMS",
   "browserRequired": true,
   "webcamRequired": true,
-  "availableFrom": "May 15 at 9:00am",
-  "availableUntil": "May 15 at 12:00pm",
-  "due": "May 15 at 12:00pm",
+  "availableFrom": "2024-05-15",
+  "availableUntil": "2024-05-15",
+  "due": "2024-05-15",
   "questionsNum": 8,
   "questions": [
     {
@@ -823,9 +823,9 @@
   "assignmentGroup": "QUIZZES",
   "browserRequired": false,
   "webcamRequired": false,
-  "availableFrom": "Jan 25 at 10:00am",
-  "availableUntil": "Jan 25 at 11:30am",
-  "due": "Jan 25 at 11:30am",
+  "availableFrom": "2024-01-25",
+  "availableUntil": "2024-01-25",
+  "due": "2024-01-25",
   "questionsNum": 5,
   "questions": [
     {
@@ -894,9 +894,9 @@
   "assignmentGroup": "EXAMS",
   "browserRequired": true,
   "webcamRequired": true,
-  "availableFrom": "Feb 28 at 1:00pm",
-  "availableUntil": "Feb 28 at 3:00pm",
-  "due": "Feb 28 at 3:00pm",
+  "availableFrom": "2024-02-28",
+  "availableUntil": "2024-02-28",
+  "due": "2024-02-28",
   "questionsNum": 6,
   "questions": [
     {
@@ -976,9 +976,9 @@
   "assignmentGroup": "QUIZZES",
   "browserRequired": false,
   "webcamRequired": false,
-  "availableFrom": "Mar 15 at 2:00pm",
-  "availableUntil": "Mar 15 at 3:30pm",
-  "due": "Mar 15 at 3:30pm",
+  "availableFrom": "2024-03-15",
+  "availableUntil": "2024-03-15",
+  "due": "2024-03-15",
   "questionsNum": 5,
   "questions": [
     {
@@ -1047,9 +1047,9 @@
   "assignmentGroup": "QUIZZES",
   "browserRequired": false,
   "webcamRequired": false,
-  "availableFrom": "Apr 5 at 9:00am",
-  "availableUntil": "Apr 5 at 10:30am",
-  "due": "Apr 5 at 10:30am",
+  "availableFrom": "2024-04-05",
+  "availableUntil": "2024-04-05",
+  "due": "2024-04-05",
   "questionsNum": 4,
   "questions": [
     {
@@ -1111,9 +1111,9 @@
   "assignmentGroup": "EXAMS",
   "browserRequired": true,
   "webcamRequired": true,
-  "availableFrom": "May 10 at 9:00am",
-  "availableUntil": "May 10 at 12:00pm",
-  "due": "May 10 at 12:00pm",
+  "availableFrom": "2024-05-10",
+  "availableUntil": "2024-05-10",
+  "due": "2024-05-10",
   "questionsNum": 8,
   "questions": [
     {

@@ -6,10 +6,10 @@ import { getCourses } from '../services/courseService'
 function EnrollmentPage() {
   const [enrollments, setEnrollments] = useState([])
   const [currentEnrollment, setCurrentEnrollment] = useState({
-    studentId: '',
-    courseId: '',
+    user: '',           // Changed from studentId to user
+    course: '',         // Changed from courseId to course
     enrollmentDate: new Date().toISOString().split('T')[0],
-    status: 'active'
+    status: 'ACTIVE'
   })
   const [editing, setEditing] = useState(false)
   const [users, setUsers] = useState([])
@@ -23,12 +23,13 @@ function EnrollmentPage() {
 
   const fetchEnrollments = async () => {
     try {
-      const response = await getEnrollments()
-      setEnrollments(response.data)
+      const response = await getEnrollments();
+      console.log('Enrollments response:', response.data);
+      setEnrollments(response.data);
     } catch (error) {
-      console.error('Error fetching enrollments:', error)
+      console.error('Error fetching enrollments:', error);
     }
-  }
+  };
 
   const fetchUsers = async () => {
     try {
@@ -64,10 +65,10 @@ function EnrollmentPage() {
         await createEnrollment(currentEnrollment)
       }
       setCurrentEnrollment({
-        studentId: '',
-        courseId: '',
+        user: '',       // Changed from studentId to user
+        course: '',     // Changed from courseId to course
         enrollmentDate: new Date().toISOString().split('T')[0],
-        status: 'active'
+        status: 'ACTIVE'
       })
       setEditing(false)
       fetchEnrollments()
@@ -77,8 +78,31 @@ function EnrollmentPage() {
   }
 
   const handleEdit = (enrollment) => {
-    setCurrentEnrollment(enrollment)
-    setEditing(true)
+    // Create a copy of the enrollment to modify
+    const enrollmentToEdit = { ...enrollment };
+    
+    // Format the date correctly for the date input (yyyy-MM-dd)
+    if (enrollmentToEdit.enrollmentDate) {
+      const date = new Date(enrollmentToEdit.enrollmentDate);
+      // Use local date components to avoid timezone issues
+      const year = date.getFullYear();
+      // Month is 0-based in JavaScript (0 = January)
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      enrollmentToEdit.enrollmentDate = `${year}-${month}-${day}`;
+    }
+    
+    // Make sure we use the IDs for the dropdowns, not the objects
+    if (typeof enrollmentToEdit.user === 'object' && enrollmentToEdit.user !== null) {
+      enrollmentToEdit.user = enrollmentToEdit.user._id;
+    }
+    
+    if (typeof enrollmentToEdit.course === 'object' && enrollmentToEdit.course !== null) {
+      enrollmentToEdit.course = enrollmentToEdit.course._id;
+    }
+    
+    setCurrentEnrollment(enrollmentToEdit);
+    setEditing(true);
   }
 
   const handleDelete = async (id) => {
@@ -90,18 +114,6 @@ function EnrollmentPage() {
     }
   }
 
-  // Helper function to find user name by ID
-  const getUserName = (id) => {
-    const user = users.find(user => user._id === id)
-    return user ? user.name : 'Unknown'
-  }
-
-  // Helper function to find course title by ID
-  const getCourseTitle = (id) => {
-    const course = courses.find(course => course._id === id)
-    return course ? course.title : 'Unknown'
-  }
-
   return (
     <div className="page-container">
       <h2>Enrollments</h2>
@@ -111,8 +123,8 @@ function EnrollmentPage() {
         <div className="form-group">
           <label>Student</label>
           <select
-            name="studentId"
-            value={currentEnrollment.studentId}
+            name="user"      // Changed from studentId to user
+            value={currentEnrollment.user}
             onChange={handleInputChange}
             required
           >
@@ -125,8 +137,8 @@ function EnrollmentPage() {
         <div className="form-group">
           <label>Course</label>
           <select
-            name="courseId"
-            value={currentEnrollment.courseId}
+            name="course"    // Changed from courseId to course
+            value={currentEnrollment.course}
             onChange={handleInputChange}
             required
           >
@@ -154,19 +166,20 @@ function EnrollmentPage() {
             onChange={handleInputChange}
             required
           >
-            <option value="active">Active</option>
-            <option value="completed">Completed</option>
-            <option value="dropped">Dropped</option>
+            <option value="ACTIVE">Active</option>
+            <option value="COMPLETED">Completed</option>
+            <option value="DROPPED">Dropped</option>
+            <option value="PENDING">Pending</option> {/* Fixed from "Dropped" to "Pending" */}
           </select>
         </div>
         <button type="submit">{editing ? 'Update' : 'Create'}</button>
         {editing && (
           <button type="button" onClick={() => {
             setCurrentEnrollment({
-              studentId: '',
-              courseId: '',
+              user: '',       // Changed from studentId to user
+              course: '',     // Changed from courseId to course
               enrollmentDate: new Date().toISOString().split('T')[0],
-              status: 'active'
+              status: 'ACTIVE'
             })
             setEditing(false)
           }}>Cancel</button>
@@ -186,18 +199,27 @@ function EnrollmentPage() {
             </tr>
           </thead>
           <tbody>
-            {enrollments.map(enrollment => (
-              <tr key={enrollment._id}>
-                <td>{getUserName(enrollment.studentId)}</td>
-                <td>{getCourseTitle(enrollment.courseId)}</td>
-                <td>{new Date(enrollment.enrollmentDate).toLocaleDateString()}</td>
-                <td>{enrollment.status}</td>
-                <td>
-                  <button onClick={() => handleEdit(enrollment)}>Edit</button>
-                  <button onClick={() => handleDelete(enrollment._id)}>Delete</button>
-                </td>
+            {enrollments.length === 0 ? (
+              <tr>
+                <td colSpan="5" style={{textAlign: 'center'}}>No enrollments found</td>
               </tr>
-            ))}
+            ) : (
+              enrollments.map(enrollment => {
+                console.log('Rendering enrollment:', enrollment);
+                return (
+                  <tr key={enrollment._id}>
+                    <td>{enrollment.user.firstName + " " + enrollment.user.lastName}</td>
+                    <td>{enrollment.course.name}</td>
+                    <td>{enrollment.enrollmentDate ? new Date(enrollment.enrollmentDate).toLocaleDateString() : 'N/A'}</td>
+                    <td>{enrollment.status}</td>
+                    <td>
+                      <button onClick={() => handleEdit(enrollment)}>Edit</button>
+                      <button onClick={() => handleDelete(enrollment._id)}>Delete</button>
+                    </td>
+                  </tr>
+                );
+              })
+            )}
           </tbody>
         </table>
       </div>
