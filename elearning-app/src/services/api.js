@@ -1,12 +1,23 @@
-import axios from 'axios'
+import axios from 'axios';
+import AuthService from './AuthService';
 
-const API_URL = 'http://localhost:4000/api'
-
+// Create axios instance with base URL
 const api = axios.create({
-  baseURL: API_URL,
-  headers: {
-    'Content-Type': 'application/json'
-  }
-})
+  baseURL: 'http://localhost:4000/api/'
+});
 
-export default api
+// Add request interceptor to include auth token in headers
+api.interceptors.request.use(
+  (config) => {
+    const headers = AuthService.authHeader();
+    if (headers.Authorization) {
+      config.headers.Authorization = headers.Authorization;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
+export default api;
