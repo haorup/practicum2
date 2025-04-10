@@ -6,10 +6,13 @@ function AssignmentPage() {
   const [assignments, setAssignments] = useState([])
   const [currentAssignment, setCurrentAssignment] = useState({
     title: '',
-    description: '',
+    content: '', // Changed from description to content to match database schema
     dueDate: new Date().toISOString().split('T')[0],
     course_number: '',
-    points: 0
+    points: 0,
+    releasedOrNot: false,
+    startingDate: new Date().toISOString().split('T')[0],
+    outDatedOrNot: false
   })
   const [editing, setEditing] = useState(false)
   const [courses, setCourses] = useState([])
@@ -39,37 +42,86 @@ function AssignmentPage() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
-    setCurrentAssignment({ ...currentAssignment, [name]: value })
+    if (name === 'releasedOrNot') {
+      setCurrentAssignment({ ...currentAssignment, [name]: value === 'true' })
+    } else {
+      setCurrentAssignment({ ...currentAssignment, [name]: value })
+    }
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
+      // Create a formatted assignment object for API submission
+      const assignmentToSubmit = {
+        ...currentAssignment,
+        // Ensure dates are properly formatted strings if needed by API
+        startingDate: new Date(currentAssignment.startingDate).toISOString(),
+        dueDate: new Date(currentAssignment.dueDate).toISOString(),
+        // Ensure boolean values are properly formatted
+        releasedOrNot: Boolean(currentAssignment.releasedOrNot),
+        outDatedOrNot: Boolean(currentAssignment.outDatedOrNot)
+      };
+
+      console.log('Submitting assignment:', assignmentToSubmit);
+      
       if (editing) {
-        await updateAssignment(currentAssignment._id, currentAssignment)
+        const response = await updateAssignment(currentAssignment._id, assignmentToSubmit);
+        console.log('Update response:', response);
       } else {
-        await createAssignment(currentAssignment)
+        await createAssignment(assignmentToSubmit);
       }
+
+      // Reset form values
       setCurrentAssignment({
         title: '',
-        description: '',
+        content: '',
         dueDate: new Date().toISOString().split('T')[0],
         course_number: '',
-        points: 0
-      })
-      setEditing(false)
-      fetchAssignments()
+        points: 0,
+        releasedOrNot: false,
+        startingDate: new Date().toISOString().split('T')[0],
+        outDatedOrNot: false
+      });
+      setEditing(false);
+      fetchAssignments();
     } catch (error) {
-      console.error('Error saving assignment:', error)
+      console.error('Error saving assignment:', error);
+      // Display more detailed error information if available
+      if (error.response) {
+        console.error('Error response:', error.response.data);
+      }
     }
   }
 
   const handleEdit = (assignment) => {
-    setCurrentAssignment({
-      ...assignment,
-      dueDate: new Date(assignment.dueDate).toISOString().split('T')[0]
-    })
-    setEditing(true)
+    console.log('Original assignment for editing:', assignment);
+    
+    // Make a clean copy with all required fields
+    const editAssignment = {
+      _id: assignment._id, // Ensure ID is included
+      title: assignment.title || '',
+      content: assignment.content || '', // Make sure this matches your schema
+      course_number: assignment.course_number || '',
+      points: assignment.points || 0,
+      
+      // Format dates properly
+      dueDate: assignment.dueDate ? 
+               new Date(assignment.dueDate).toISOString().split('T')[0] : 
+               new Date().toISOString().split('T')[0],
+      
+      startingDate: assignment.startingDate ? 
+                    new Date(assignment.startingDate).toISOString().split('T')[0] : 
+                    new Date().toISOString().split('T')[0],
+      
+      // Ensure boolean values are properly handled
+      releasedOrNot: Boolean(assignment.releasedOrNot),
+      outDatedOrNot: Boolean(assignment.outDatedOrNot)
+    };
+    
+    console.log('Formatted assignment for editing:', editAssignment);
+    setCurrentAssignment(editAssignment);
+    setEditing(true);
   }
 
   const handleDelete = async (id) => {
@@ -81,7 +133,6 @@ function AssignmentPage() {
     }
   }
 
-  // Helper function to find course title by course number
   const getCourseTitle = (courseNumber) => {
     const course = courses.find(course => course.course_number === courseNumber)
     return course ? course.title : 'Unknown'
@@ -106,8 +157,18 @@ function AssignmentPage() {
         <div className="form-group">
           <label>Description</label>
           <textarea
-            name="description"
+            name="content"
             value={currentAssignment.content}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Starting Date</label>
+          <input
+            type="date"
+            name="startingDate"
+            value={currentAssignment.startingDate}
             onChange={handleInputChange}
             required
           />
@@ -132,7 +193,9 @@ function AssignmentPage() {
           >
             <option value="">Select a course</option>
             {courses.map(course => (
-              <option key={course._id} value={course.course_number}>{course.name} ({course.number})</option>
+              <option key={course._id} value={course.number}>
+                {course.name} ({course.number})
+              </option>
             ))}
           </select>
         </div>
@@ -146,15 +209,30 @@ function AssignmentPage() {
             required
           />
         </div>
+        <div className="form-group">
+          <label>Released</label>
+          <select
+            name="releasedOrNot"
+            value={currentAssignment.releasedOrNot.toString()}
+            onChange={handleInputChange}
+            required
+          >
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
         <button type="submit">{editing ? 'Update' : 'Create'}</button>
         {editing && (
           <button type="button" onClick={() => {
             setCurrentAssignment({
               title: '',
-              description: '',
+              content: '',
               dueDate: new Date().toISOString().split('T')[0],
               course_number: '',
-              points: 0
+              points: 0,
+              releasedOrNot: false,
+              startingDate: new Date().toISOString().split('T')[0],
+              outDatedOrNot: false
             })
             setEditing(false)
           }}>Cancel</button>

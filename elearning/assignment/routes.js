@@ -4,7 +4,7 @@ import * as dao from "./dao.js";
 const router = express.Router();
 
 // Create a new assignment
-router.post("/api/courses/:cid/assignment", async (req, res) => {
+router.post("/api/assignments", async (req, res) => {
   try {
     const newAssignment = await dao.createAssignment(req.body);
     res.status(201).json(newAssignment);
@@ -23,9 +23,8 @@ router.get("/api/assignments", async (req, res) => {
   }
 });
 
-
 // Update assignment
-router.put("/api/courses/:aid", async (req, res) => {
+router.put("/api/assignments/:id", async (req, res) => {
   try {
     const updatedAssignment = await dao.updateAssignment(req.params.id, req.body);
     if (!updatedAssignment) {
@@ -38,7 +37,7 @@ router.put("/api/courses/:aid", async (req, res) => {
 });
 
 // Delete assignment
-router.delete("/api/courses/:aid", async (req, res) => {
+router.delete("/api/assignments/:id", async (req, res) => {
   try {
     const deletedAssignment = await dao.deleteAssignment(req.params.id);
     if (!deletedAssignment) {
