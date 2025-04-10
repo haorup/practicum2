@@ -3,7 +3,7 @@
     "$oid": "67ef53e352126ab8ed55d753"
   },
   "username": "emma_smith",
-  "password": "hashedPassword456",
+  "password": "$2b$10$BR09Da6O/NJSipx9ipIcv.FCWC.8peKHy0EAXVhuWCgVyAH07A0n6",
   "firstName": "Em",
   "lastName": "Smith",
   "email": "emma.smith@university.edu",
@@ -21,7 +21,7 @@
     "$oid": "67ef53e352126ab8ed55d754"
   },
   "username": "prof_williams",
-  "password": "hashedPassword789",
+  "password": "$2b$10$sIAjuT5lsTahVdSwRYq44um8LmMPIYrtPp3WhYi.52eylSq3xhPSK",
   "firstName": "Robert",
   "lastName": "Williams",
   "email": "r.williams@university.edu",
@@ -35,7 +35,7 @@
     "$oid": "67ef53e352126ab8ed55d755"
   },
   "username": "admin_johnson",
-  "password": "hashedPasswordAdm",
+  "password": "$2b$10$wTBeKgzH4k1fwDvBTUXXveLGKkLzNhhgAV0TLNwR8pAiM.0TjS.4C",
   "firstName": "Patricia",
   "lastName": "Johnson",
   "email": "p.johnson@university.edu",
@@ -49,7 +49,7 @@
     "$oid": "67ef53e352126ab8ed55d756"
   },
   "username": "sarah_miller",
-  "password": "hashedPassword321",
+  "password": "$2b$10$DSXbAgNk961/hLhJ51w45eVUTWVCTeiAXMYZFiQBrGlrS1Kyl9Fcq",
   "firstName": "Sarah",
   "lastName": "Miller",
   "email": "s.miller@university.edu",
@@ -63,7 +63,7 @@
     "$oid": "67ef53e352126ab8ed55d757"
   },
   "username": "david_brown",
-  "password": "hashedPassword654",
+  "password": "$2b$10$8Ri5lFmiSxIZIv7/wCu2Z.o.NCyFlgPxWaQQy.bp6jEHFHZlLV8X.",
   "firstName": "David",
   "lastName": "Brown",
   "email": "d.brown@university.edu",
@@ -77,7 +77,7 @@
     "$oid": "67ef53e352126ab8ed55d758"
   },
   "username": "prof_davis",
-  "password": "hashedPassword987",
+  "password": "$2b$10$xfdwx9F70/txuNj3dm6HmeX1f/jYYfQBg/YbHHOSV/.OIKBX7G7xe",
   "firstName": "Jennifer",
   "lastName": "Davis",
   "email": "j.davis@university.edu",
@@ -91,7 +91,7 @@
     "$oid": "67ef53e352126ab8ed55d759"
   },
   "username": "michelle_wilson",
-  "password": "hashedPasswordMw",
+  "password": "$2b$10$t71/4WewO69wXw9awi.GCOrOgGNLgFnuPdxl3smFj/fGpmYKC/RwW",
   "firstName": "Michelle",
   "lastName": "Wilson",
   "email": "m.wilson@university.edu",
@@ -105,7 +105,7 @@
     "$oid": "67ef53e352126ab8ed55d75a"
   },
   "username": "james_taylor",
-  "password": "hashedPasswordJt",
+  "password": "$2b$10$se108zNvzCPwo1t4HyVhduwxKtqWTelFgzChT.i2i9bgqxQKGJil.",
   "firstName": "James",
   "lastName": "Taylor",
   "email": "j.taylor@university.edu",
@@ -119,7 +119,7 @@
     "$oid": "67ef53e352126ab8ed55d75b"
   },
   "username": "prof_martin",
-  "password": "hashedPasswordPm",
+  "password": "$2b$10$OUAeAAsr5M/aCK8ajfIqXe5iAUnXDwkyrrJbZs22/xBrL6F/AiBX2",
   "firstName": "Richard",
   "lastName": "Martin",
   "email": "r.martin@university.edu",
@@ -133,7 +133,7 @@
     "$oid": "67ef53e352126ab8ed55d75c"
   },
   "username": "admin_garcia",
-  "password": "hashedPasswordAg",
+  "password": "$2b$10$7zyuASzc8MtMqcyUFbTV/ug1ydp0VKr1/htZewW1B370p4Z8O2Rn6",
   "firstName": "Maria",
   "lastName": "Garcia",
   "email": "m.garcia@university.edu",
@@ -147,7 +147,7 @@
     "$oid": "67ef53e352126ab8ed55d75d"
   },
   "username": "elizabeth_harris",
-  "password": "hashedPasswordEh",
+  "password": "$2b$10$F3AFaEZU0cvtK/3ob29b7Oitk/03PDeW8eQvXuXDrEMfjKwMNZiQ.",
   "firstName": "Elizabeth",
   "lastName": "Harris",
   "email": "e.harris@university.edu",
@@ -161,7 +161,7 @@
     "$oid": "67ef53e352126ab8ed55d75e"
   },
   "username": "michael_clark",
-  "password": "hashedPasswordMc",
+  "password": "$2b$10$kLnbrDqpgSbK1IgO1aIWROQh2MWc6RSLcM1kiBNOMdVLU7P3IjfMu",
   "firstName": "Michael",
   "lastName": "Clark",
   "email": "m.clark@university.edu",
@@ -175,7 +175,7 @@
     "$oid": "67ef53e352126ab8ed55d75f"
   },
   "username": "prof_robinson",
-  "password": "hashedPasswordRob",
+  "password": "$2b$10$gKcVsX/WWFwroUQXMfGskOQvFkSOE5ibHibO6n4qyxoKn.biKe/uy",
   "firstName": "Susan",
   "lastName": "Robinson",
   "email": "s.robinson@university.edu",
@@ -189,7 +189,7 @@
     "$oid": "67ef53e352126ab8ed55d760"
   },
   "username": "thomas_wright",
-  "password": "hashedPasswordTw",
+  "password": "$2b$10$WZi8t.EZW2270HsqR.XYiuznpqfRHlWF/QEuvmmV8a5/I7UaR.MHC",
   "firstName": "Thomas",
   "lastName": "Wright",
   "email": "t.wright@university.edu",
@@ -203,7 +203,7 @@
     "$oid": "67ef53e352126ab8ed55d761"
   },
   "username": "lisa_hall",
-  "password": "hashedPasswordLh",
+  "password": "$2b$10$ETUUSo8JereYuW6FWB1Y3uOjuCcn2q3fF49uewURcadJSNneSdosW",
   "firstName": "Lisa",
   "lastName": "Hall",
   "email": "l.hall@university.edu",
@@ -217,7 +217,7 @@
     "$oid": "67ef53e352126ab8ed55d762"
   },
   "username": "prof_adams",
-  "password": "hashedPasswordAda",
+  "password": "$2b$10$seN.jIA5nX7Ms8N5rBwPbOaVfbpyB7bybMqjD990qEGV4Y4Ma3xSK",
   "firstName": "Charles",
   "lastName": "Adams",
   "email": "c.adams@university.edu",
@@ -231,7 +231,7 @@
     "$oid": "67ef53e352126ab8ed55d763"
   },
   "username": "karen_young",
-  "password": "hashedPasswordKy",
+  "password": "$2b$10$MTYTRw816nFS6/CjjTPe.uF5LcvLAvGHIItTG7SXM/Yg8sCVyp7c2",
   "firstName": "Karen",
   "lastName": "Young",
   "email": "k.young@university.edu",
@@ -245,7 +245,7 @@
     "$oid": "67ef53e352126ab8ed55d764"
   },
   "username": "daniel_allen",
-  "password": "hashedPasswordDa",
+  "password": "$2b$10$APLdpf/hp2SninZ/LFB25OGUcboG.4wiHqJKYlbm8pSE/HAY0QscS",
   "firstName": "Daniel",
   "lastName": "Allen",
   "email": "d.allen@university.edu",
@@ -259,7 +259,7 @@
     "$oid": "67ef53e352126ab8ed55d765"
   },
   "username": "admin_evans",
-  "password": "hashedPasswordEva",
+  "password": "$2b$10$n6JH1QRhLddvOZwWyz2tf.r5Wi8VNvr8tw6F3I06ItNRKEVDmWrdW",
   "firstName": "William",
   "lastName": "Evans",
   "email": "w.evans@university.edu",
@@ -273,7 +273,7 @@
     "$oid": "67f61d0dc9d47b0d3d25a207"
   },
   "username": "john.d",
-  "password": "defaultPassword123",
+  "password": "$2b$10$iVEVyWaQpO34kvrgTXrRbONjNDzjb8/itiOanYvTlHJtOxi8i6Uxu",
   "firstName": "John",
   "email": "john.d@example.edu",
   "lastName": "Doe",
@@ -289,7 +289,7 @@
     "$oid": "67f61d2ec9d47b0d3d25a20a"
   },
   "username": "mikey.j",
-  "password": "defaultPassword123",
+  "password": "$2b$10$MZtG.eOhlK0rRoRQcgxRWecDOQaLUvOBGUnKH4g.glH7ZBMf9bJ0q",
   "firstName": "mikey",
   "email": "mikey.j@example.edu",
   "lastName": "jackson",

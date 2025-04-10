@@ -151,5 +151,5 @@ export const runTransactionDemos = async () => {
   }
 };
 
-// Uncomment to run the demos directly when executing this file
+
 // runTransactionDemos().catch(console.error);

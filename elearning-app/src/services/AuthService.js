@@ -5,7 +5,13 @@ const API_URL = 'http://localhost:4000/api/auth/';
 class AuthService {
   async login(username, password) {
     try {
-      const response = await axios.post(API_URL + 'login', { username, password });
+      // Add a flag to indicate this might be a legacy password
+      const response = await axios.post(API_URL + 'login', { 
+        username, 
+        password,
+        legacyAuth: true 
+      });
+      
       if (response.data.token) {
         localStorage.setItem('user', JSON.stringify(response.data));
       }

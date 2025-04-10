@@ -8,23 +8,10 @@ import userRoutes from "./user/routes.js";
 import enrollmentRoutes from "./enrollment/routes.js";
 import authRoutes from './auth/authRoutes.js';
 import { verifyToken } from './middleware/authMiddleware.js';
+import dotenv from 'dotenv';
 
-// const CONNECTION_STRING = "mongodb://127.0.0.1:27017/elearning";
-// mongoose.connect(CONNECTION_STRING);
-// const app = express();
-// app.use(cors());
-// app.use(express.json());
-
-// // Register routes
-// app.use(assignmentRoutes);
-// app.use(courseRoutes);
-// app.use(quizRoutes);
-// app.use(userRoutes);
-// app.use(enrollmentRoutes);
-
-// app.listen(process.env.PORT || 4000, () => {
-//   console.log(`Server running on port ${process.env.PORT || 4000}`);
-// });
+// Load environment variables
+dotenv.config();
 
 const app = express();
 
@@ -32,11 +19,37 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Connect to MongoDB
-const MONGODB_URI = 'mongodb://localhost:27017/elearning';
-mongoose.connect(MONGODB_URI)
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.error('MongoDB connection error:', err));
+// Connect to MongoDB Atlas with proper ServerAPI configuration
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/elearning';
+// const MONGODB_URI = 'mongodb://localhost:27017/elearning';
+
+// Configure MongoDB connection with ServerAPI options
+mongoose.connect(MONGODB_URI, {
+  serverApi: {
+    version: '1',
+    strict: true,
+    deprecationErrors: true
+  }
+})
+.then(() => {
+  console.log('Initial connection successful');
+  return mongoose.connection.db.admin().command({ ping: 1 });
+})
+.then(() => {
+  console.log('Connected to MongoDB Atlas successfully! ');
+  // Log database name to confirm we're connected to the right database
+  console.log(`Connected to database: ${mongoose.connection.name}`);
+})
+.catch(err => {
+  console.error('MongoDB Atlas connection error:', err);
+  // More detailed error information
+  if (err.name === 'MongoServerSelectionError') {
+    console.error('Could not select a MongoDB server. Check your network or connection string.');
+  }
+  // For debugging connection issues
+  console.error('Connection string used (without password):', 
+    MONGODB_URI.replace(/:([^:@]+)@/, ':****@'));
+});
 
 // Public routes
 app.use('/api/auth', authRoutes);
