@@ -3,13 +3,17 @@ import * as dao from "./dao.js";
 
 const router = express.Router();
 
-// Create a new enrollment
+// Create a new enrollment with transaction support
 router.post("/api/enrollments", async (req, res) => {
   try {
     const newEnrollment = await dao.createEnrollment(req.body);
     res.status(201).json(newEnrollment);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    console.error("Enrollment creation failed:", error);
+    res.status(400).json({ 
+      message: error.message,
+      transactionFailed: true
+    });
   }
 });
 
@@ -66,7 +70,7 @@ router.get("/api/users/:userId/courses/:courseId/enrollment", async (req, res) =
   }
 });
 
-// Update enrollment
+// Update enrollment with transaction support
 router.put("/api/enrollments/:id", async (req, res) => {
   try {
     const updatedEnrollment = await dao.updateEnrollment(req.params.id, req.body);
@@ -75,11 +79,15 @@ router.put("/api/enrollments/:id", async (req, res) => {
     }
     res.status(200).json(updatedEnrollment);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    console.error("Enrollment update failed:", error);
+    res.status(400).json({ 
+      message: error.message,
+      transactionFailed: true
+    });
   }
 });
 
-// Delete enrollment
+// Delete enrollment with transaction support
 router.delete("/api/enrollments/:id", async (req, res) => {
   try {
     const deletedEnrollment = await dao.deleteEnrollment(req.params.id);
@@ -88,7 +96,35 @@ router.delete("/api/enrollments/:id", async (req, res) => {
     }
     res.status(200).json({ message: "Enrollment deleted successfully" });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    console.error("Enrollment deletion failed:", error);
+    res.status(500).json({ 
+      message: error.message,
+      transactionFailed: true
+    });
+  }
+});
+
+// Bulk enrollment endpoint - demonstrates complex transaction with potential rollback
+router.post("/api/courses/:courseId/bulk-enroll", async (req, res) => {
+  try {
+    const { userIds } = req.body;
+    
+    if (!userIds || !Array.isArray(userIds) || userIds.length === 0) {
+      return res.status(400).json({ message: "Invalid user IDs provided" });
+    }
+    
+    const results = await dao.bulkEnrollStudents(req.params.courseId, userIds);
+    
+    res.status(200).json({
+      message: "Bulk enrollment processed",
+      results
+    });
+  } catch (error) {
+    console.error("Bulk enrollment failed:", error);
+    res.status(500).json({ 
+      message: error.message,
+      transactionFailed: true
+    });
   }
 });
 

@@ -60,13 +60,16 @@ function EnrollmentPage() {
     e.preventDefault()
     try {
       if (editing) {
-        await updateEnrollment(currentEnrollment._id, currentEnrollment)
+        const response = await updateEnrollment(currentEnrollment._id, currentEnrollment)
+        console.log('Enrollment updated successfully:', response.data)
       } else {
-        await createEnrollment(currentEnrollment)
+        const response = await createEnrollment(currentEnrollment)
+        console.log('Enrollment created successfully:', response.data)
       }
+      
       setCurrentEnrollment({
-        user: '',       // Changed from studentId to user
-        course: '',     // Changed from courseId to course
+        user: '',
+        course: '',
         enrollmentDate: new Date().toISOString().split('T')[0],
         status: 'ACTIVE'
       })
@@ -74,6 +77,13 @@ function EnrollmentPage() {
       fetchEnrollments()
     } catch (error) {
       console.error('Error saving enrollment:', error)
+      
+      // Handle transaction failure specifically
+      if (error.response && error.response.data && error.response.data.transactionFailed) {
+        alert(`Transaction failed: ${error.response.data.message}`)
+      } else {
+        alert(`Error: ${error.response?.data?.message || error.message}`)
+      }
     }
   }
 
