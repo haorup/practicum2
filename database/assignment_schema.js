@@ -10,7 +10,7 @@ const assignmentSchema = new mongoose.Schema({
     outDatedOrNot: { type: Boolean, default: false },
     content: { type: String },
   },
-  { collection: "assignments" }
+  { collection: "assignment" }
 );
 
 export default assignmentSchema;

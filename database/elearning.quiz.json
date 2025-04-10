@@ -1,4 +1,7 @@
 [{
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2e0"
+  },
   "title": "EXAM 1 FA 23",
   "description": "",
   "type": "Graded Quiz",
@@ -60,69 +63,11 @@
   "published": true
 },
 {
-  "title": "Q3 - JS, ES6",
-  "description": "",
-  "type": "Graded Quiz",
-  "points": 80,
-  "timeLimit": 30,
-  "assignmentGroup": "QUIZZES",
-  "browserRequired": false,
-  "webcamRequired": false,
-  "availableFrom": "",
-  "availableUntil": "",
-  "due": "Multiple Dates",
-  "questionsNum": 4,
-  "questions": [
-    {
-      "questionId": 1,
-      "questionType": "Multiple Choice",
-      "questionPoints": "20",
-      "questionContent": "What is the capital of America?",
-      "options": [
-        "Paris",
-        "Beijing",
-        "Washington"
-      ],
-      "CorrectAns": "Washington",
-      "questionDifficulty": "easy"
-    },
-    {
-      "questionId": 2,
-      "questionType": "Fill in Blank",
-      "questionPoints": "20",
-      "questionContent": "What is your favorite food?",
-      "CorrectAns": [
-        "pizza",
-        "dumplings",
-        "pasta",
-        "steak"
-      ],
-      "questionDifficulty": "easy"
-    },
-    {
-      "questionId": 3,
-      "questionType": "True/False",
-      "questionPoints": "20",
-      "questionContent": "Two plus two equals four",
-      "CorrectAns": true,
-      "questionDifficulty": "easy"
-    },
-    {
-      "questionId": 4,
-      "questionType": "True/False",
-      "questionPoints": "20",
-      "questionContent": "Two plus one equals four",
-      "CorrectAns": false,
-      "questionDifficulty": "easy"
-    }
-  ],
-  "courses": "RS101",
-  "howManyAttempts": 0,
-  "published": true
-},
-{
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2e2"
+  },
   "title": "Q2 - CSS",
-  "description": "",
+  "description": "css style problems",
   "type": "Graded Quiz",
   "points": 80,
   "timeLimit": 30,
@@ -145,43 +90,61 @@
         "Washington"
       ],
       "CorrectAns": "Washington",
-      "questionDifficulty": "easy"
+      "questionDifficulty": "easy",
+      "_id": {
+        "$oid": "67f634da87f660a6ecd9228f"
+      }
     },
     {
       "questionId": 2,
       "questionType": "Fill in Blank",
       "questionPoints": "20",
       "questionContent": "What is your favorite food?",
+      "options": [],
       "CorrectAns": [
         "pizza",
         "dumplings",
         "pasta",
         "steak"
       ],
-      "questionDifficulty": "easy"
+      "questionDifficulty": "easy",
+      "_id": {
+        "$oid": "67f634da87f660a6ecd92290"
+      }
     },
     {
       "questionId": 3,
       "questionType": "True/False",
       "questionPoints": "20",
       "questionContent": "Two plus two equals four",
+      "options": [],
       "CorrectAns": true,
-      "questionDifficulty": "easy"
+      "questionDifficulty": "easy",
+      "_id": {
+        "$oid": "67f634da87f660a6ecd92291"
+      }
     },
     {
       "questionId": 4,
       "questionType": "True/False",
       "questionPoints": "20",
       "questionContent": "Two plus one equals four",
+      "options": [],
       "CorrectAns": false,
-      "questionDifficulty": "easy"
+      "questionDifficulty": "easy",
+      "_id": {
+        "$oid": "67f634da87f660a6ecd92292"
+      }
     }
   ],
-  "courses": "RS101",
+  "courses": "CH1240",
   "howManyAttempts": 0,
   "published": true
 },
 {
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2e3"
+  },
   "title": "Q1 - HTML",
   "description": "",
   "type": "Graded Quiz",
@@ -243,67 +206,9 @@
   "published": false
 },
 {
-  "title": "Q3",
-  "description": "",
-  "type": "Graded Quiz",
-  "points": 80,
-  "timeLimit": 30,
-  "assignmentGroup": "QUIZZES",
-  "browserRequired": false,
-  "webcamRequired": false,
-  "availableFrom": "",
-  "availableUntil": "",
-  "due": "Multiple Dates",
-  "questionsNum": 4,
-  "questions": [
-    {
-      "questionId": 1,
-      "questionType": "Multiple Choice",
-      "questionPoints": "20",
-      "questionContent": "What is the capital of America?",
-      "options": [
-        "Paris",
-        "Beijing",
-        "Washington"
-      ],
-      "CorrectAns": "Washington",
-      "questionDifficulty": "easy"
-    },
-    {
-      "questionId": 2,
-      "questionType": "Fill in Blank",
-      "questionPoints": "20",
-      "questionContent": "What is your favorite food?",
-      "CorrectAns": [
-        "pizza",
-        "dumplings",
-        "pasta",
-        "steak"
-      ],
-      "questionDifficulty": "easy"
-    },
-    {
-      "questionId": 3,
-      "questionType": "True/False",
-      "questionPoints": "20",
-      "questionContent": "Two plus two equals four",
-      "CorrectAns": true,
-      "questionDifficulty": "easy"
-    },
-    {
-      "questionId": 4,
-      "questionType": "True/False",
-      "questionPoints": "20",
-      "questionContent": "Two plus one equals four",
-      "CorrectAns": false,
-      "questionDifficulty": "easy"
-    }
-  ],
-  "courses": "RS102",
-  "howManyAttempts": 0,
-  "published": false
-},
-{
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2e5"
+  },
   "title": "EXAM 2 FA23",
   "description": "",
   "type": "Graded Quiz",
@@ -365,6 +270,9 @@
   "published": false
 },
 {
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2e6"
+  },
   "title": "Q4 - NODE",
   "description": "",
   "type": "Graded Quiz",
@@ -422,6 +330,9 @@
   "published": false
 },
 {
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2e7"
+  },
   "title": "Q5 - MONGO",
   "description": "",
   "type": "Graded Quiz",
@@ -483,6 +394,9 @@
   "published": false
 },
 {
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2e8"
+  },
   "title": "Quantum Mechanics Basics Quiz",
   "description": "Test your understanding of fundamental quantum mechanics concepts",
   "type": "Graded Quiz",
@@ -559,6 +473,9 @@
   "published": true
 },
 {
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2e9"
+  },
   "title": "Quantum Circuits Midterm Exam",
   "description": "Comprehensive evaluation of quantum circuit design principles",
   "type": "Graded Quiz",
@@ -642,6 +559,9 @@
   "published": true
 },
 {
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2ea"
+  },
   "title": "Quantum Error Correction Quiz",
   "description": "Assessment on quantum error detection and correction methods",
   "type": "Graded Quiz",
@@ -706,6 +626,9 @@
   "published": true
 },
 {
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2eb"
+  },
   "title": "Quantum Computing Final Exam",
   "description": "Comprehensive assessment of quantum computing knowledge",
   "type": "Graded Quiz",
@@ -815,6 +738,9 @@
   "published": false
 },
 {
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2ec"
+  },
   "title": "Ancient Hydraulic Systems Quiz",
   "description": "Assessment of knowledge on ancient water management technologies",
   "type": "Graded Quiz",
@@ -886,6 +812,9 @@
   "published": true
 },
 {
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2ed"
+  },
   "title": "Ancient Dam Construction Midterm",
   "description": "Comprehensive exam on ancient dam engineering principles",
   "type": "Graded Quiz",
@@ -968,6 +897,9 @@
   "published": true
 },
 {
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2ee"
+  },
   "title": "Irrigation Systems Comparison Quiz",
   "description": "Assessment on different ancient irrigation technologies",
   "type": "Graded Quiz",
@@ -1039,6 +971,9 @@
   "published": true
 },
 {
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2ef"
+  },
   "title": "Water Lifting Devices Quiz",
   "description": "Test on ancient mechanical water lifting technologies",
   "type": "Graded Quiz",
@@ -1103,6 +1038,9 @@
   "published": true
 },
 {
+  "_id": {
+    "$oid": "67f6333130bcd5365624d2f0"
+  },
   "title": "Ancient Hydraulic Engineering Final Exam",
   "description": "Comprehensive assessment of ancient water management systems",
   "type": "Graded Quiz",
@@ -1210,4 +1148,26 @@
   "courses": "ENG303",
   "howManyAttempts": 0,
   "published": false
+},
+{
+  "_id": {
+    "$oid": "67f6363887f660a6ecd923a0"
+  },
+  "title": "css-style-responsive",
+  "description": "responsive questions",
+  "type": "Graded Quiz",
+  "points": 100,
+  "timeLimit": 60,
+  "assignmentGroup": "QUIZZES",
+  "browserRequired": false,
+  "webcamRequired": false,
+  "availableFrom": "2025-04-09",
+  "availableUntil": "2025-04-09",
+  "due": "2025-04-09",
+  "questionsNum": 0,
+  "questions": [],
+  "courses": "CS4500",
+  "howManyAttempts": 0,
+  "published": false,
+  "__v": 0
 }]

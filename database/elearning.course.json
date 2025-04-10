@@ -1,8 +1,13 @@
 [{
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d31f"
+  },
   "number": "RS103",
   "name": "Spacecraft Design",
   "term": "2025 SP",
-  "instructor": " ",
+  "instructor": {
+    "$oid": "67ef53e352126ab8ed55d754"
+  },
   "department": "D123",
   "credits": 4,
   "description": "This course delves into the principles and practices of spacecraft design, offering students a detailed understanding of the engineering and technology behind spacecraft systems. Key topics include spacecraft structure, propulsion, power systems, thermal control, and payload integration. Emphasizing both theoretical concepts and practical skills, the course prepares students for careers in the space industry, with a focus on innovative design and problem-solving in the context of current and future space missions",
@@ -20,10 +25,15 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d320"
+  },
   "name": "Inorganic Chemistry",
   "number": "CH1240",
   "term": "2025 SP",
-  "instructor": " ",
+  "instructor": {
+    "$oid": "67ef53e352126ab8ed55d758"
+  },
   "department": "D134",
   "credits": 3,
   "description": "Inorganic Chemistry focuses on the properties, structures, and behaviors of inorganic and organometallic compounds. This course covers a range of topics including coordination chemistry, metal complexes, bonding theories, symmetry, and crystal field theory. Students will also explore the role of inorganic chemistry in real-world applications such as catalysis, materials science, and bioinorganic processes. Laboratory work emphasizes synthesis and analysis of inorganic compounds, fostering a deeper understanding of theoretical concepts.",
@@ -41,10 +51,15 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d321"
+  },
   "name": "Physical Chemistry",
   "number": "CH1250",
   "term": "2025 SP",
-  "instructor": " ",
+  "instructor": {
+    "$oid": "67ef53e352126ab8ed55d75b"
+  },
   "department": "D134",
   "credits": 3,
   "description": "Physical Chemistry merges the principles of physics and chemistry to understand the physical properties of molecules, the forces that act upon them, and the chemical reactions they undergo. Key topics include thermodynamics, kinetics, quantum mechanics, and spectroscopy. The course provides a comprehensive understanding of molecular behavior, reaction dynamics, and the application of mathematical methods in solving chemical problems. Labs focus on experimental techniques and data analysis, equipping students with skills necessary for research and advanced study in chemistry and related fields.",
@@ -62,6 +77,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d322"
+  },
   "name": "Ancient Languages and Scripts of Middle-earth",
   "number": "ME101",
   "term": "2025 SP",
@@ -83,6 +101,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d323"
+  },
   "name": "Principles of Democratic Education",
   "number": "EDU201",
   "term": "2025 SP",
@@ -104,6 +125,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d324"
+  },
   "name": "Foundations of Christian Ethics",
   "number": "THEO101",
   "term": "2025 SP",
@@ -125,6 +149,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d325"
+  },
   "name": "Early Christianity and the Apostolic Age",
   "number": "HIS201",
   "term": "2025 SP",
@@ -146,6 +173,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d326"
+  },
   "name": "Leadership and Service in Christian Communities",
   "number": "MIN301",
   "term": "2025 SP",
@@ -167,6 +197,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d327"
+  },
   "name": "Sufi Philosophy and Mystical Traditions",
   "number": "ISL301",
   "term": "2025 SP",
@@ -188,6 +221,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d328"
+  },
   "name": "Ethical Wisdom in Islamic Teachings",
   "number": "ISL202",
   "term": "2025 SP",
@@ -209,6 +245,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d329"
+  },
   "name": "Leadership Lessons from Chinese Mythology",
   "number": "MGT201",
   "term": "2025 SP",
@@ -230,6 +269,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d32a"
+  },
   "name": "Organic Chemistry",
   "number": "CH1230",
   "term": "2025 SP",
@@ -251,6 +293,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d32b"
+  },
   "name": "Ancient Chinese Environmental Management",
   "number": "ENV101",
   "term": "2025 SP",
@@ -272,6 +317,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d32c"
+  },
   "name": "Wizards, Elves, and Men: Inter-species Diplomacy in Middle-earth",
   "number": "ME102",
   "term": "2025 SP",
@@ -293,6 +341,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d32d"
+  },
   "name": "Understanding the Unseen: Islamic Esotericism",
   "number": "ISL403",
   "term": "2025 SP",
@@ -314,6 +365,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d32e"
+  },
   "name": "History and Practice of Middle-earth Magic",
   "number": "ME103",
   "term": "2025 SP",
@@ -335,6 +389,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d32f"
+  },
   "name": "Philosophy of Independence and Liberation",
   "number": "HIS301",
   "term": "2025 SP",
@@ -356,6 +413,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d330"
+  },
   "name": "Innovations in Early 19th Century Education",
   "number": "EDU303",
   "term": "2025 SP",
@@ -377,6 +437,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d331"
+  },
   "name": "Hydraulic Engineering in Ancient Civilizations",
   "number": "ENG303",
   "term": "2025 SP",
@@ -398,6 +461,9 @@
   ]
 },
 {
+  "_id": {
+    "$oid": "67f6ee5b30bcd5365624d332"
+  },
   "name": "Quantum Computing Fundamentals",
   "number": "CS4500",
   "term": "2025 SP",
@@ -417,4 +483,20 @@
       "releasedOrNot": false
     }
   ]
+},
+{
+  "_id": {
+    "$oid": "67f71a7ab148fe0e7e432156"
+  },
+  "number": "cs101",
+  "name": "computer science",
+  "term": "2025 SP",
+  "instructor": {
+    "$oid": "67ef53e352126ab8ed55d754"
+  },
+  "department": "cs",
+  "credits": 1,
+  "description": "cs",
+  "lessons": [],
+  "__v": 0
 }]

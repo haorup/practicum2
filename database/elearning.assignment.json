@@ -1,0 +1,264 @@
+[{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cac"
+  },
+  "title": "Quantum Mechanics Principles Quiz",
+  "course_number": "CS4500",
+  "points": 30,
+  "releasedOrNot": true,
+  "startingDate": {
+    "$date": "2023-01-15T00:00:00.000Z"
+  },
+  "dueDate": {
+    "$date": "2023-01-22T00:00:00.000Z"
+  },
+  "outDatedOrNot": true,
+  "content": "Complete the online quiz covering the basic principles of quantum mechanics including superposition, entanglement, and wave-particle duality."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cad"
+  },
+  "title": "Qubit Implementation Research Paper",
+  "course_number": "CS4500",
+  "points": 100,
+  "releasedOrNot": true,
+  "startingDate": "2023-02-01",
+  "dueDate": "2023-02-28",
+  "outDatedOrNot": true,
+  "content": "Research and write a 5-page paper on current physical implementations of qubits, comparing at least three different approaches (superconducting circuits, trapped ions, etc.) and analyzing their scalability potential."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cae"
+  },
+  "title": "Quantum Circuit Design Lab",
+  "course_number": "CS4500",
+  "points": 75,
+  "releasedOrNot": true,
+  "startingDate": "2023-03-05",
+  "dueDate": "2023-03-19",
+  "outDatedOrNot": false,
+  "content": "Using the Qiskit framework, design and implement quantum circuits that demonstrate basic quantum algorithms. Submit your code and a 2-page analysis of the results."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8caf"
+  },
+  "title": "Shor's Algorithm Analysis",
+  "course_number": "CS4500",
+  "points": 50,
+  "releasedOrNot": true,
+  "startingDate": "2023-03-25",
+  "dueDate": "2023-04-08",
+  "outDatedOrNot": false,
+  "content": "Analyze the mathematical foundations of Shor's algorithm for integer factorization. Implement a simplified version and discuss its implications for cryptography."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cb0"
+  },
+  "title": "Quantum Error Correction Techniques",
+  "course_number": "CS4500",
+  "points": 75,
+  "releasedOrNot": true,
+  "startingDate": "2023-04-10",
+  "dueDate": "2023-04-24",
+  "outDatedOrNot": false,
+  "content": "Explore quantum error correction techniques through simulation. Compare the effectiveness of different error correction codes and submit a comprehensive report of your findings."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cb1"
+  },
+  "title": "Quantum Machine Learning Project",
+  "course_number": "CS4500",
+  "points": 150,
+  "releasedOrNot": false,
+  "startingDate": "2023-04-25",
+  "dueDate": "2023-05-10",
+  "outDatedOrNot": false,
+  "content": "Implement a quantum algorithm for a machine learning task. Compare its performance with classical approaches and present your findings in a 10-minute video presentation and accompanying paper."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cb2"
+  },
+  "title": "Final Exam: Quantum Computing Concepts",
+  "course_number": "CS4500",
+  "points": 200,
+  "releasedOrNot": false,
+  "startingDate": "2023-05-10",
+  "dueDate": "2023-05-15",
+  "outDatedOrNot": false,
+  "content": "Comprehensive examination covering all course material including quantum mechanics principles, quantum algorithms, physical implementations, error correction, and applications of quantum computing."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cb3"
+  },
+  "title": "Ancient Dam Construction Analysis",
+  "course_number": "ENG303",
+  "points": 50,
+  "releasedOrNot": true,
+  "startingDate": "2023-01-15",
+  "dueDate": "2023-01-29",
+  "outDatedOrNot": true,
+  "content": "Analyze the structural design and materials used in ancient dam constructions, with particular focus on Yu the Great's flood control systems. Submit a detailed engineering analysis with diagrams."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cb4"
+  },
+  "title": "Comparative Study of Irrigation Systems",
+  "course_number": "ENG303",
+  "points": 75,
+  "releasedOrNot": true,
+  "startingDate": "2023-02-05",
+  "dueDate": "2023-02-26",
+  "outDatedOrNot": true,
+  "content": "Compare irrigation systems from at least three ancient civilizations, including design elements, water distribution efficiency, and environmental impact. Include technical drawings of key components."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cb5"
+  },
+  "title": "Ancient Canal Engineering Lab Report",
+  "course_number": "ENG303",
+  "points": 100,
+  "releasedOrNot": true,
+  "startingDate": "2023-03-01",
+  "dueDate": "2023-03-22",
+  "outDatedOrNot": true,
+  "content": "Based on the lab simulations, analyze the hydraulic principles employed in ancient canal systems. Submit calculations of water flow rates, erosion factors, and structural stability analysis."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cb6"
+  },
+  "title": "Water Lifting Device Replication Project",
+  "course_number": "ENG303",
+  "points": 125,
+  "releasedOrNot": true,
+  "startingDate": "2023-03-25",
+  "dueDate": "2023-04-15",
+  "outDatedOrNot": false,
+  "content": "Design and build a working small-scale model of an ancient water lifting device (e.g., Archimedes screw, noria, shaduf). Document the engineering principles and provide performance metrics."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cb7"
+  },
+  "title": "Mesopotamian vs. Chinese Hydraulic Engineering",
+  "course_number": "ENG303",
+  "points": 75,
+  "releasedOrNot": true,
+  "startingDate": "2023-04-16",
+  "dueDate": "2023-04-30",
+  "outDatedOrNot": false,
+  "content": "Write a research paper comparing the hydraulic engineering approaches of Mesopotamian and ancient Chinese civilizations, with emphasis on technological innovations and environmental adaptations."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cb8"
+  },
+  "title": "Modern Applications of Ancient Hydraulic Principles",
+  "course_number": "ENG303",
+  "points": 100,
+  "releasedOrNot": false,
+  "startingDate": "2023-05-01",
+  "dueDate": "2023-05-10",
+  "outDatedOrNot": false,
+  "content": "Identify and analyze three modern engineering applications that utilize principles originally developed in ancient hydraulic systems. Discuss how these principles have evolved and been optimized."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cb9"
+  },
+  "title": "Final Project: Comprehensive Hydraulic System Design",
+  "course_number": "ENG303",
+  "points": 200,
+  "releasedOrNot": false,
+  "startingDate": "2023-04-01",
+  "dueDate": "2023-05-15",
+  "outDatedOrNot": false,
+  "content": "Design a comprehensive water management system for an ancient city, integrating multiple hydraulic technologies studied throughout the course. Include detailed engineering specifications, materials analysis, and sustainability considerations."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cba"
+  },
+  "title": "Introduction to Medieval Literature",
+  "course_number": "LIT202",
+  "points": 50,
+  "releasedOrNot": true,
+  "startingDate": "2023-01-12",
+  "dueDate": "2023-01-26",
+  "outDatedOrNot": true,
+  "content": "Write an essay analyzing the themes and narrative techniques in selected medieval texts, focusing on their historical and cultural contexts."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cbb"
+  },
+  "title": "Chemical Reaction Kinetics Lab",
+  "course_number": "CH1250",
+  "points": 75,
+  "releasedOrNot": true,
+  "startingDate": "2023-02-08",
+  "dueDate": "2023-02-22",
+  "outDatedOrNot": true,
+  "content": "Conduct experiments on reaction rates and factors affecting chemical kinetics. Submit a comprehensive lab report with data analysis and conclusions."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cbc"
+  },
+  "title": "Ethical Case Studies in Leadership",
+  "course_number": "MIN301",
+  "points": 60,
+  "releasedOrNot": true,
+  "startingDate": "2023-03-10",
+  "dueDate": "2023-03-24",
+  "outDatedOrNot": true,
+  "content": "Analyze three ethical dilemmas in community leadership settings. Apply ethical frameworks and principles to propose solutions and leadership approaches."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cbd"
+  },
+  "title": "Sufism and Western Mysticism",
+  "course_number": "ISL301",
+  "points": 80,
+  "releasedOrNot": true,
+  "startingDate": "2023-04-05",
+  "dueDate": "2023-04-26",
+  "outDatedOrNot": false,
+  "content": "Compare and contrast Sufi mystical traditions with Western mysticism, examining philosophical underpinnings, practices, and cultural expressions. Submit a research paper with proper citations."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cbe"
+  },
+  "title": "Spacecraft Propulsion Systems Design",
+  "course_number": "RS103",
+  "points": 120,
+  "releasedOrNot": true,
+  "startingDate": "2023-03-15",
+  "dueDate": "2023-04-15",
+  "outDatedOrNot": false,
+  "content": "Design a propulsion system for a specific space mission scenario. Include technical specifications, performance calculations, and justification for design choices."
+},
+{
+  "_id": {
+    "$oid": "67eebe831923d001101c8cbf"
+  },
+  "title": "Democracy and Education Policy Analysis",
+  "course_number": "EDU201",
+  "points": 90,
+  "releasedOrNot": false,
+  "startingDate": "2023-04-10",
+  "dueDate": "2023-05-05",
+  "outDatedOrNot": false,
+  "content": "Analyze a current educational policy issue through the lens of democratic values and principles. Propose policy modifications that would enhance democratic engagement and equity in education."
+}]

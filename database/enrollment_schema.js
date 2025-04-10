@@ -28,7 +28,7 @@ const enrollmentSchema = new mongoose.Schema(
       type: Date 
     }
   },
-  { collection: "enrollments" }
+  { collection: "enrollment" }
 );
 
 // Create a compound index to ensure unique student-course pairs
