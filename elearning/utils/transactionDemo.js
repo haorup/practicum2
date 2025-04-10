@@ -3,6 +3,19 @@ import { withTransaction } from "./transactionUtils.js";
 import Enrollment from "../enrollment/model.js";
 import User from "../user/model.js";
 import Course from "../course/model.js";
+import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
+
+// Get the directory name properly in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Load environment variables with explicit path to .env file
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
+
+// Log to debug if environment variable is loaded
+console.log("MONGODB_URI available:", process.env.MONGODB_URI ? "Yes" : "No");
 
 /**
  * Demonstrates a successful transaction across multiple operations
@@ -119,12 +132,151 @@ export const demonstrateFailedTransaction = async () => {
 };
 
 /**
- * Run both demonstrations
+ * Demonstrates a complex transaction that handles bulk enrollment with partial success
+ * @param {string} courseId - The ID of the course to enroll students in
+ * @param {string[]} userIds - Array of user IDs to enroll
+ * @returns {Object} Results of the bulk enrollment operation
  */
+export const bulkEnrollStudents = async (courseId, userIds) => {
+  try {
+    return await withTransaction(async (session) => {
+      const results = {
+        successful: [],
+        failed: []
+      };
+      
+      // Verify the course exists
+      const course = await Course.findById(courseId).session(session);
+      if (!course) {
+        throw new Error(`Course with ID ${courseId} does not exist`);
+      }
+      
+      for (const userId of userIds) {
+        try {
+          // Check if the user exists
+          const user = await User.findById(userId).session(session);
+          if (!user) {
+            throw new Error(`User with ID ${userId} does not exist`);
+          }
+          
+          // Check for existing enrollment
+          const existingEnrollment = await Enrollment.findOne({
+            user: userId,
+            course: courseId
+          }).session(session);
+          
+          if (existingEnrollment) {
+            throw new Error(`User ${userId} is already enrolled in course ${courseId}`);
+          }
+          
+          // Create enrollment if no existing enrollment found
+          const newEnrollment = new Enrollment({
+            user: userId,
+            course: courseId,
+            enrollmentDate: new Date(),
+            status: "ACTIVE"
+          });
+          
+          const savedEnrollment = await newEnrollment.save({ session });
+          
+          // Record success
+          results.successful.push({
+            userId,
+            enrollmentId: savedEnrollment._id
+          });
+        } catch (error) {
+          // Record individual failure without failing entire transaction
+          results.failed.push({
+            userId,
+            reason: error.message
+          });
+        }
+      }
+      
+      // Only roll back if nothing succeeded
+      if (results.successful.length === 0 && userIds.length > 0) {
+        throw new Error("All enrollments failed");
+      }
+      
+      return results;
+    });
+  } catch (error) {
+    console.error("Bulk enrollment failed:", error);
+    throw error;
+  }
+};
+
+/**
+ * Demonstrates the bulk enrollment functionality
+ */
+export const demonstrateBulkEnrollment = async () => {
+  try {
+    console.log("Starting bulk enrollment demonstration...");
+    
+    // First create a test course
+    const testCourse = new Course({
+      name: "Bulk Enrollment Test Course",
+      number: "TRX201",
+      term: "2025 FA",
+      department: "CS",
+      credits: 3
+    });
+    await testCourse.save();
+    
+    // Create a few test users
+    const testUsers = [];
+    for (let i = 1; i <= 5; i++) {
+      const user = new User({
+        username: `bulk_user_${i}`,
+        password: "password123",
+        firstName: `Bulk${i}`,
+        lastName: "User",
+        email: `bulk${i}@test.com`,
+        userID: 88000 + i,
+        role: "STUDENT"
+      });
+      const savedUser = await user.save();
+      testUsers.push(savedUser);
+    }
+    
+    // Create an invalid user ID for testing partial failure
+    const validUserIds = testUsers.map(user => user._id);
+    const invalidUserId = new mongoose.Types.ObjectId();
+    
+    // Run bulk enrollment with mixed valid/invalid users
+    const userIdsToEnroll = [...validUserIds, invalidUserId];
+    console.log(`Attempting to enroll ${userIdsToEnroll.length} users (${validUserIds.length} valid, 1 invalid)`);
+    
+    const results = await bulkEnrollStudents(testCourse._id, userIdsToEnroll);
+    
+    console.log("Bulk enrollment results:", {
+      successful: results.successful.length,
+      failed: results.failed.length,
+      details: results
+    });
+    
+    return results;
+  } catch (error) {
+    console.error("Bulk enrollment demonstration failed:", error);
+    throw error;
+  }
+};
+
+// Add the bulk enrollment demo to the run function
 export const runTransactionDemos = async () => {
   // Setup MongoDB connection if needed
   if (mongoose.connection.readyState !== 1) {
-    await mongoose.connect('mongodb://localhost:27017/elearning');
+    // Use environment variable with fallback
+    const atlasUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/elearning';
+    
+    if (!atlasUri) {
+      console.error("MongoDB URI is not defined! Check your .env file.");
+      process.exit(1);
+    }
+    
+    console.log("Connecting to MongoDB Atlas...");
+    await mongoose.connect(atlasUri);
+    console.log("Connected to MongoDB Atlas");
   }
   
   try {
@@ -140,6 +292,14 @@ export const runTransactionDemos = async () => {
     const failureResult = await demonstrateFailedTransaction();
     console.log("Failed transaction result:", failureResult);
     
+    // Run bulk enrollment demonstration 
+    console.log("\n3. COMPLEX TRANSACTION WITH PARTIAL SUCCESS DEMO:");
+    const bulkResult = await demonstrateBulkEnrollment();
+    console.log("Bulk enrollment result summary:", {
+      successful: bulkResult.successful.length,
+      failed: bulkResult.failed.length
+    });
+    
     console.log("\n=== DEMONSTRATIONS COMPLETE ===");
   } catch (error) {
     console.error("Error running demos:", error);
@@ -151,5 +311,6 @@ export const runTransactionDemos = async () => {
   }
 };
 
-
-// runTransactionDemos().catch(console.error);
+// Before running this script directly, make sure to set your MongoDB URI
+// You can either set the MONGODB_URI environment variable or replace the connection string above
+runTransactionDemos().catch(console.error);

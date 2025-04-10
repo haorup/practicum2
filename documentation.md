@@ -164,7 +164,7 @@ try {
 
 We've implemented demonstration cases to show both successful transactions and proper rollback behavior.
 
-### Successful Transaction Demonstration
+### 1. Successful Transaction Demonstration
 
 The `demonstrateSuccessfulTransaction()` function shows a multi-step transaction:
 
@@ -212,7 +212,7 @@ export const demonstrateSuccessfulTransaction = async () => {
 
 This creates three related documents in a single atomic transaction.
 
-### Rollback Demonstration
+### 2. Rollback Demonstration
 
 The `demonstrateFailedTransaction()` function shows proper rollback behavior:
 
@@ -270,17 +270,7 @@ This demonstrates:
 3. Verifying all operations are rolled back (no partial commits)
 4. Checking that none of the documents were persisted to the database
 
-### Running the Demonstrations
-
-You can run both demonstrations with:
-
-```javascript
-// Execute this in Node.js to see both scenarios
-import { runTransactionDemos } from './utils/transactionDemo.js';
-runTransactionDemos();
-```
-
-## Complex Transaction Example: Bulk Enrollment
+### 3. Complex Transaction Example: Bulk Enrollment
 
 The `bulkEnrollStudents` function demonstrates a more complex transaction that can handle partial failures within a transaction:
 
@@ -325,6 +315,86 @@ This implementation:
 2. Tracks individual successes and failures
 3. Allows partial success (some enrollments succeed while others fail)
 4. Only triggers a complete rollback if all enrollments fail
+
+### Running the Demonstrations
+
+You can execute both transaction demonstrations by running:
+
+```bash
+node elearning/utils/transactionDemo.js
+```
+
+This will produce output similar to:
+
+```
+MONGODB_URI available: Yes
+Connecting to MongoDB Atlas...
+Connected to MongoDB Atlas
+=== TRANSACTION DEMONSTRATIONS ===
+
+1. SUCCESSFUL TRANSACTION DEMO:
+Starting successful transaction demonstration...
+Transaction successful! {
+  user: {
+    username: 'test_transaction_user',
+    password: 'password123',
+    firstName: 'Test',
+    email: 'test@transaction.com',
+    lastName: 'User',
+    userID: 99999,
+    role: 'STUDENT',
+    _id: new ObjectId('67f834bd4fbb8418da4dccbe')
+  },
+  course: {
+    number: 'TRX101',
+    name: 'Transaction Test Course',
+    term: '2025 FA',
+    department: 'CS',
+    credits: 3,
+    _id: new ObjectId('67f834be4fbb8418da4dccc1'),
+    lessons: [],
+    __v: 0
+  },
+  enrollment: {
+    user: new ObjectId('67f834bd4fbb8418da4dccbe'),
+    course: new ObjectId('67f834be4fbb8418da4dccc1'),
+    enrollmentDate: 2025-04-10T21:14:38.091Z,
+    status: 'ACTIVE',
+    _id: new ObjectId('67f834be4fbb8418da4dccc3'),
+    __v: 0
+  }
+}
+
+2. FAILED TRANSACTION WITH ROLLBACK DEMO:
+Starting failed transaction demonstration...
+Transaction failed as expected with rollback: Transaction failed: enrollment validation failed: status: `INVALID_STATUS` is not a valid enum value for path `status`.
+User was rolled back: true
+Course was rolled back: true
+Failed transaction result: { rolledBack: true, userExists: false, courseExists: false }
+
+3. COMPLEX TRANSACTION WITH PARTIAL SUCCESS DEMO:
+Starting bulk enrollment demonstration...
+Attempting to enroll 6 users (5 valid, 1 invalid)
+Bulk enrollment results: {
+  successful: 5,
+  failed: 1,
+  details: {
+    successful: [ [Object], [Object], [Object], [Object], [Object] ],
+    failed: [ [Object] ]
+  }
+}
+Bulk enrollment result summary: { successful: 5, failed: 1 }
+```
+
+The output demonstrates:
+
+1. **Successful Transaction**: Creates a user, course, and enrollment in a single atomic operation, with all three objects persisted to the database.
+
+2. **Failed Transaction with Rollback**: Attempts to create objects with invalid data (invalid enrollment status), causing a validation error. The output confirms that both the user and course objects were properly rolled back and not persisted to the database, maintaining data integrity.
+
+3. **Complex Transaction with Partial Success**: Demonstrates a bulk enrollment operation where multiple enrollments are processed in a single transaction. The transaction successfully enrolls 5 users while properly handling 1 invalid enrollment without rolling back the entire transaction.
+
+These demonstrations verify that our transaction implementation correctly handles both successful operations and proper rollbacks when errors occur.
 
 ## MongoDB vs. RDBMS Transactions
 
