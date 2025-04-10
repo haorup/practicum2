@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getCourses, createCourse, updateCourse, deleteCourse } from '../services/courseService'
-import { getUsers } from '../services/userService'
+import { getUsers, getUser } from '../services/userService'
 
 function CoursePage() {
   const [courses, setCourses] = useState([])
@@ -16,6 +16,7 @@ function CoursePage() {
   })
   const [editing, setEditing] = useState(false)
   const [faculty, setFaculty] = useState([])
+  const [instructorCache, setInstructorCache] = useState({})
 
   useEffect(() => {
     fetchCourses()
@@ -27,6 +28,27 @@ function CoursePage() {
       const response = await getCourses()
       console.log("Fetched courses:", response.data)
       setCourses(response.data)
+      
+      const instructorIds = response.data
+        .filter(course => course.instructor && typeof course.instructor === 'string')
+        .map(course => course.instructor)
+      
+      const uniqueInstructorIds = [...new Set(instructorIds)]
+      
+      const instructorData = { ...instructorCache }
+      
+      for (const id of uniqueInstructorIds) {
+        if (!instructorCache[id]) {
+          try {
+            const instructorResponse = await getUser(id)
+            instructorData[id] = instructorResponse.data
+          } catch (err) {
+            console.error(`Error fetching instructor ${id}:`, err)
+          }
+        }
+      }
+      
+      setInstructorCache(instructorData)
     } catch (error) {
       console.error('Error fetching courses:', error)
     }
@@ -57,7 +79,6 @@ function CoursePage() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      // Create a clean object with only the fields we want to update
       const courseToSubmit = {
         name: currentCourse.name,
         number: currentCourse.number,
@@ -65,7 +86,6 @@ function CoursePage() {
         department: currentCourse.department,
         credits: currentCourse.credits,
         description: currentCourse.description,
-        // Send only the instructor ID, not the entire object
         instructor: currentCourse.instructor ? currentCourse.instructor._id : null
       };
       
@@ -76,7 +96,6 @@ function CoursePage() {
         const response = await updateCourse(currentCourse._id, courseToSubmit);
         console.log("Update response:", response);
         
-        // Force refetch to see if instructor was actually updated on server
         setTimeout(() => fetchCourses(), 500);
       } else {
         await createCourse(courseToSubmit);
@@ -100,8 +119,36 @@ function CoursePage() {
   }
 
   const handleEdit = (course) => {
-    setCurrentCourse({ ...course })
-    setEditing(true)
+    // Check what format the instructor is in and standardize
+    let formattedCourse = { ...course };
+    
+    // If instructor is just an ID string, look up the full object from faculty
+    if (typeof course.instructor === 'string') {
+      // Try to find instructor in faculty array
+      const instructorObj = faculty.find(f => f._id === course.instructor);
+      if (instructorObj) {
+        formattedCourse.instructor = instructorObj;
+      } else if (instructorCache[course.instructor]) {
+        // If not in faculty but in cache, use from cache
+        formattedCourse.instructor = instructorCache[course.instructor];
+      }
+      // Otherwise leave as is for getInstructorValue to handle
+    }
+    
+    setCurrentCourse(formattedCourse);
+    setEditing(true);
+  }
+
+  // Helper function to get the correct value for instructor dropdown
+  const getInstructorValue = () => {
+    if (!currentCourse.instructor) return '';
+    if (typeof currentCourse.instructor === 'object' && currentCourse.instructor._id) {
+      return currentCourse.instructor._id;
+    }
+    if (typeof currentCourse.instructor === 'string') {
+      return currentCourse.instructor;
+    }
+    return '';
   }
 
   const handleDelete = async (id) => {
@@ -115,7 +162,17 @@ function CoursePage() {
 
   const getInstructorName = (instructor) => {
     if (!instructor) return 'None'
-    return `${instructor.firstName} ${instructor.lastName}`
+    
+    if (instructor.firstName && instructor.lastName) {
+      return `${instructor.firstName} ${instructor.lastName}`
+    }
+    
+    if (typeof instructor === 'string' && instructorCache[instructor]) {
+      const instructorData = instructorCache[instructor]
+      return `${instructorData.firstName} ${instructorData.lastName}`
+    }
+    
+    return `Instructor ID: ${instructor}`
   }
 
   return (
@@ -186,7 +243,7 @@ function CoursePage() {
           <label>Instructor</label>
           <select
             name="instructor"
-            value={currentCourse.instructor ? currentCourse.instructor._id : ''}
+            value={getInstructorValue()}
             onChange={handleInputChange}
           >
             <option value="">Select an Instructor</option>
