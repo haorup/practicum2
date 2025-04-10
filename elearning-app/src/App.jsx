@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import Layout from './components/Layout'
 import CoursePage from './pages/CoursePage'
 import AssignmentPage from './pages/AssignmentPage'
@@ -8,40 +8,52 @@ import EnrollmentPage from './pages/EnrollmentPage'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import AuthService from './services/AuthService'
+import Account from './pages/Account'
+import { UserProvider } from './context/UserContext'
+import { useEffect } from 'react'
 
 // Protected route component
 const PrivateRoute = ({ children }) => {
   const isAuthenticated = AuthService.isAuthenticated();
+  const location = useLocation();
   
-  return isAuthenticated ? children : <Navigate to="/login" />;
+  useEffect(() => {
+    // For debugging - remove this in production
+    console.log(`Checking auth for path: ${location.pathname}, authenticated: ${isAuthenticated}`);
+  }, [location, isAuthenticated]);
+  
+  return isAuthenticated ? children : <Navigate to="/login" state={{ from: location }} />;
 };
 
 function App() {
   return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      
-      {/* Redirect root to login if not authenticated */}
-      <Route path="/" element={
-        AuthService.isAuthenticated() ? 
-        <Navigate to="/courses" /> : 
-        <Navigate to="/login" />
-      } />
-      
-      {/* Protected routes */}
-      <Route path="/" element={
-        <PrivateRoute>
-          <Layout />
-        </PrivateRoute>
-      }>
-        <Route path="courses" element={<CoursePage />} />
-        <Route path="assignments" element={<AssignmentPage />} />
-        <Route path="quizzes" element={<QuizPage />} />
-        <Route path="users" element={<UserPage />} />
-        <Route path="enrollments" element={<EnrollmentPage />} />
-      </Route>
-    </Routes>
+    <UserProvider>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        
+        {/* Redirect root to login if not authenticated */}
+        <Route path="/" element={
+          AuthService.isAuthenticated() ? 
+          <Navigate to="/courses" /> : 
+          <Navigate to="/login" />
+        } />
+        
+        {/* Layout wrapper for all protected routes */}
+        <Route element={
+          <PrivateRoute>
+            <Layout />
+          </PrivateRoute>
+        }>
+          <Route path="courses" element={<CoursePage />} />
+          <Route path="assignments" element={<AssignmentPage />} />
+          <Route path="quizzes" element={<QuizPage />} />
+          <Route path="users" element={<UserPage />} />
+          <Route path="enrollments" element={<EnrollmentPage />} />
+          <Route path="account" element={<Account />} />
+        </Route>
+      </Routes>
+    </UserProvider>
   )
 }
 

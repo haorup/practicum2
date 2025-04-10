@@ -1,23 +1,45 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet, NavLink, useNavigate } from 'react-router-dom'
+import { useUser } from '../context/UserContext'
 
 function Layout() {
+  const navigate = useNavigate();
+  const { user, logout } = useUser();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
+
   return (
     <div className="app-container">
       <header>
+        <h1>E-Learning Platform</h1>
+        <div className="user-info">
+          {user ? (
+            <>
+              <span>Welcome, {user.firstName || user.username}</span>
+              <button onClick={handleLogout}>Logout</button>
+            </>
+          ) : (
+            <NavLink to="/login">Login</NavLink>
+          )}
+        </div>
+      </header>
+      <div className="content-container">
         <nav>
-          <h1>E-Learning Platform</h1>
           <ul>
-            <li><Link to="/courses">Courses</Link></li>
-            <li><Link to="/assignments">Assignments</Link></li>
-            <li><Link to="/quizzes">Quizzes</Link></li>
-            <li><Link to="/users">Users</Link></li>
-            <li><Link to="/enrollments">Enrollments</Link></li>
+            <li><NavLink to="/courses">Courses</NavLink></li>
+            <li><NavLink to="/assignments">Assignments</NavLink></li>
+            <li><NavLink to="/quizzes">Quizzes</NavLink></li>
+            <li><NavLink to="/users">Users</NavLink></li>
+            <li><NavLink to="/enrollments">Enrollments</NavLink></li>
+            <li><NavLink to="/account">My Account</NavLink></li>
           </ul>
         </nav>
-      </header>
-      <main>
-        <Outlet />
-      </main>
+        <main>
+          <Outlet />
+        </main>
+      </div>
     </div>
   )
 }

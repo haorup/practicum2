@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import AuthService from '../../services/AuthService';
+import { useUser } from '../../context/UserContext';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -8,6 +8,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
+  const { login } = useUser();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -16,7 +17,7 @@ const Login = () => {
     setLoading(true);
     
     try {
-      await AuthService.login(username, password);
+      await login(username, password);
       navigate("/courses");
     } catch (error) {
       const resMessage = 
