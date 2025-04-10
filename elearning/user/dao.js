@@ -1,4 +1,5 @@
 import User from "./model.js";
+import Enrollment from "../enrollment/model.js";
 
 export const createUser = async (user) => {
   try {
@@ -51,6 +52,13 @@ export const updateUser = async (id, user) => {
 
 export const deleteUser = async (id) => {
   try {
+    // Check if user has any enrollments
+    const enrollments = await Enrollment.find({ user: id });
+    if (enrollments.length > 0) {
+      throw new Error("Cannot delete user with existing enrollments. Please remove their enrollments first.");
+    }
+    
+    // If no enrollments, proceed with deletion
     return await User.findByIdAndDelete(id);
   } catch (error) {
     throw new Error(`Error deleting user: ${error.message}`);

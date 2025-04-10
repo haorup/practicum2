@@ -1,4 +1,5 @@
 import Course from "./model.js";
+import Enrollment from "../enrollment/model.js";
 
 export const createCourse = async (course) => {
   try {
@@ -43,6 +44,13 @@ export const updateCourse = async (id, course) => {
 
 export const deleteCourse = async (id) => {
   try {
+    // Check if course has any enrollments
+    const enrollments = await Enrollment.find({ course: id });
+    if (enrollments.length > 0) {
+      throw new Error("Cannot delete course with existing enrollments. Please remove course enrollments first.");
+    }
+    
+    // If no enrollments, proceed with deletion
     return await Course.findByIdAndDelete(id);
   } catch (error) {
     throw new Error(`Error deleting course: ${error.message}`);

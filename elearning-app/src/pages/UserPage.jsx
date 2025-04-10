@@ -72,6 +72,10 @@ function UserPage() {
       fetchUsers()
     } catch (error) {
       console.error('Error deleting user:', error)
+      // Display meaningful error message to the user
+      const errorMessage = error.response?.data?.message || 
+        "Cannot delete this user. They may have active enrollments that must be removed first."
+      alert(errorMessage)
     }
   }
 

@@ -70,6 +70,26 @@ router.get("/api/users/:userId/courses/:courseId/enrollment", async (req, res) =
   }
 });
 
+// New endpoint to check if a user has any enrollments
+router.get("/api/users/:userId/has-enrollments", async (req, res) => {
+  try {
+    const enrollments = await Enrollment.find({ user: req.params.userId }).limit(1);
+    res.status(200).json({ hasEnrollments: enrollments.length > 0 });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// New endpoint to check if a course has any enrollments
+router.get("/api/courses/:courseId/has-enrollments", async (req, res) => {
+  try {
+    const enrollments = await Enrollment.find({ course: req.params.courseId }).limit(1);
+    res.status(200).json({ hasEnrollments: enrollments.length > 0 });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 // Update enrollment with transaction support
 router.put("/api/enrollments/:id", async (req, res) => {
   try {

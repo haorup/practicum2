@@ -6,8 +6,8 @@ import { getCourses } from '../services/courseService'
 function EnrollmentPage() {
   const [enrollments, setEnrollments] = useState([])
   const [currentEnrollment, setCurrentEnrollment] = useState({
-    user: '',           // Changed from studentId to user
-    course: '',         // Changed from courseId to course
+    user: '',
+    course: '',
     enrollmentDate: new Date().toISOString().split('T')[0],
     status: 'ACTIVE'
   })
@@ -133,21 +133,21 @@ function EnrollmentPage() {
         <div className="form-group">
           <label>Student</label>
           <select
-            name="user"      // Changed from studentId to user
+            name="user"
             value={currentEnrollment.user}
             onChange={handleInputChange}
             required
           >
             <option value="">Select a student</option>
             {users.map(user => (
-              <option key={user._id} value={user._id}>{user.firstName +" "+ user.lastName}</option>
+              <option key={user._id} value={user._id}>{user.firstName + " " + user.lastName}</option>
             ))}
           </select>
         </div>
         <div className="form-group">
           <label>Course</label>
           <select
-            name="course"    // Changed from courseId to course
+            name="course"
             value={currentEnrollment.course}
             onChange={handleInputChange}
             required
@@ -179,15 +179,15 @@ function EnrollmentPage() {
             <option value="ACTIVE">Active</option>
             <option value="COMPLETED">Completed</option>
             <option value="DROPPED">Dropped</option>
-            <option value="PENDING">Pending</option> {/* Fixed from "Dropped" to "Pending" */}
+            <option value="PENDING">Pending</option>
           </select>
         </div>
         <button type="submit">{editing ? 'Update' : 'Create'}</button>
         {editing && (
           <button type="button" onClick={() => {
             setCurrentEnrollment({
-              user: '',       // Changed from studentId to user
-              course: '',     // Changed from courseId to course
+              user: '',
+              course: '',
               enrollmentDate: new Date().toISOString().split('T')[0],
               status: 'ACTIVE'
             })

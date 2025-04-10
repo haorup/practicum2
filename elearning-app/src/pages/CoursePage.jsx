@@ -157,6 +157,10 @@ function CoursePage() {
       fetchCourses()
     } catch (error) {
       console.error('Error deleting course:', error)
+      // Display meaningful error message to the user
+      const errorMessage = error.response?.data?.message || 
+        "Cannot delete this course. It may have active enrollments that must be removed first."
+      alert(errorMessage)
     }
   }
 
