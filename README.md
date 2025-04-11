@@ -22,7 +22,7 @@ This repository contains a full-stack e-learning platform with a Node.js/Express
 - The database is hosted on MongoDB Atlas, and the connection string should be stored in the `.env` file.
 - The `.env` file should be created in the root directory of the backend project: `elearning/`.
 - Please find the environment variable in the comment of the submission on CANVAS. The connection string is not included in the repository for security reasons. When you run the program, please create a `.env` file in the `elearning/` directory, and copy the connection string from the comment to the `.env` file. Thank you!
-- The database name is `elearning`, and the collections are `users`, `courses`, `enrollments`, `assignments`, and `quizzes`.
+- The database name is `elearning`, and the collections are `user`, `course`, `enrollment`, `assignment`, and `quizze`.
 
 
 ## Running the Backend API
