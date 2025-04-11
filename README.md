@@ -4,8 +4,11 @@ This repository contains a full-stack e-learning platform with a Node.js/Express
 
 ## Project Structure
 
-- `elearning/` - Backend API server (Node.js/Express)
-- `elearning-app/` - Frontend web application (React/Vite)
+- `elearning/` - Latest backend API server (Node.js/Express)
+- `elearning-app/` - Latest Frontend web application (React/Vite)
+- `database/` - Sample data backup files for MongoDB database
+- `query/` - query files for Task 5 and Task 6
+- `documentation/` - Documentation files for milestone2: Task 3 ~ Task 6.
 
 ## Prerequisites
 
@@ -15,14 +18,12 @@ This repository contains a full-stack e-learning platform with a Node.js/Express
 
 ## Setting Up the Database
 
-1. Install MongoDB if you haven't already:
+***Update for Milestone 2***
+- The database is hosted on MongoDB Atlas, and the connection string should be stored in the `.env` file.
+- The `.env` file should be created in the root directory of the backend project: `elearning/`.
+- Please find the environment variable in the comment of the submission on CANVAS. The connection string is not included in the repository for security reasons. When you run the program, please create a `.env` file in the `elearning/` directory, and copy the connection string from the comment to the `.env` file. Thank you!
+- The database name is `elearning`, and the collections are `users`, `courses`, `enrollments`, `assignments`, and `quizzes`.
 
-2. Start MongoDB:
-   ```
-   mongod --dbpath /path/to/data/directory
-   ```
-
-3. The application will automatically create the required database and collections when it first runs.
 
 ## Running the Backend API
 
@@ -31,12 +32,8 @@ This repository contains a full-stack e-learning platform with a Node.js/Express
    cd elearning
    ```
 
-2. Install dependencies:
-   ```
-   npm install
-   ```
 
-3. Start the server:
+2. Start the server:
    ```
    npm start
    ```
@@ -62,6 +59,34 @@ The API will be available at http://localhost:4000/api
 
 The web application will be available at http://localhost:5173
 
+## Running queries for Task 5 and Task 6
+1. Navigate to the query directory after running the backend server:
+   ```
+   cd elearning/query
+   ```
+2. Run the query files for Task 5 using the following command:
+   ```
+   node runQuery.js getInstructorCourseLoad
+   node runQuery.js getStudentPerformanceAnalytics
+   node runQuery.js getCourseContentAnalysis
+   node runQuery.js getDepartmentAnalytics
+   ```
+3. To run the index optimization script (Task 6), first make sure you are in the `elearning/query` directory and have the required MongoDB connection string in your `.env` file.
+
+4. Then run the index optimization operations:
+   ```
+   # To create indexes:
+   node runIndexOptimization.js create-indexes
+
+   # To run performance benchmarks:
+   node runIndexOptimization.js benchmark
+
+   # To generate query explain plans:
+   node runIndexOptimization.js explain
+   ```
+
+5. The results will be printed in the console.
+
 ## API Endpoints
 
 The backend provides the following main API endpoints:
@@ -71,37 +96,6 @@ The backend provides the following main API endpoints:
 - Enrollments: `/api/enrollments`
 - Assignments: `/api/assignments`
 - Quizzes: `/api/quizzes`
-
-## Importing Data to MongoDB
-
-There are two ways to import initial data to MongoDB:
-
-### Using MongoDB Compass (GUI)
-
-MongoDB Compass is a graphical user interface for MongoDB that makes it easy to import data visually.
-
-1. Download and install MongoDB Compass 
-
-2. Connect to your MongoDB instance:
-   - Open MongoDB Compass
-   - Enter the connection string: `mongodb://localhost:27017`
-   - Click "Connect"
-
-3. Import data:
-   - Create a new database named "elearning" if it doesn't exist
-   - Create collections matching your schema names ("users", "courses", "assignments", "quizzes")
-   - For each collection:
-     - Select the collection
-     - Click on "Add Data" dropdown button
-     - Choose "Import File"
-     - Select the file from the `/database` directory
-     - Choose JSON format
-     - Click "Import"
-
-4. Verify the data:
-   - Click on each collection
-   - You should see the imported documents displayed in the Compass interface
-
 
 
 ## Development
@@ -121,7 +115,5 @@ npm start
 ### Frontend
 ```
 cd elearning-app
-npm run build
+npm run dev
 ```
-
-The built frontend will be available in the `elearning-app/dist` directory, which can be served by any static file server.
