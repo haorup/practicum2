@@ -22,7 +22,7 @@ This repository contains a full-stack e-learning platform with a Node.js/Express
 - The database is hosted on MongoDB Atlas, and the connection string should be stored in the `.env` file.
 - The `.env` file should be created in the root directory of the backend project: `elearning/`.
 - Please find the environment variable in the comment of the submission on CANVAS. The connection string is not included in the repository for security reasons. When you run the program, please create a `.env` file in the `elearning/` directory, and copy the connection string from the comment to the `.env` file. Thank you!
-- The database name is `elearning`, and the collections are `user`, `course`, `enrollment`, `assignment`, and `quizz`.
+- The database name is `elearning`, and the collections are `user`, `course`, `enrollment`, `assignment`, and `quiz`.
 
 
 ## Running the Backend API
@@ -100,7 +100,7 @@ The backend provides the following main API endpoints:
 
 ## Development
 
-- Backend code is organized by feature (users, courses, enrollments, etc.)
+- Backend code is organized by feature (user, course, enrollment, etc.)
 - Each feature has its own directory with model, schema, DAO (Data Access Object), and routes
 - Frontend uses React with React Router for navigation and Axios for API communication
 
