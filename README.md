@@ -104,19 +104,6 @@ The backend provides the following main API endpoints:
 - Each feature has its own directory with model, schema, DAO (Data Access Object), and routes
 - Frontend uses React with React Router for navigation and Axios for API communication
 
-## Building for Production
-
-### Backend
-```
-cd elearning
-npm start
-```
-
-### Frontend
-```
-cd elearning-app
-npm run dev
-```
 
 ### Usernames and passwords for testing:
 - **Admin**: 
