@@ -63,50 +63,38 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
     
-    console.log(`Login attempt for user: ${username}`);
-    console.log(`Password in database starts with: ${user.password.substring(0, 10)}...`);
-    
     let isPasswordValid = false;
     
-    // Check if the stored password looks like a bcrypt hash (starts with $2a$, $2b$, etc.)
+    // Check if the stored password looks like a bcrypt hash
     const isBcryptHash = /^\$2[abxy]\$/.test(user.password);
-    console.log(`Password appears to be hashed: ${isBcryptHash}`);
     
     if (isBcryptHash) {
       // Try bcrypt comparison for hashed passwords
       try {
         isPasswordValid = await bcrypt.compare(password, user.password);
-        console.log(`Bcrypt comparison result: ${isPasswordValid}`);
       } catch (error) {
-        console.error("Bcrypt comparison error:", error);
         isPasswordValid = false;
       }
     }
     
     // If password is not valid yet and legacyAuth is true, try direct comparison
     if (!isPasswordValid && legacyAuth) {
-      console.log("Trying direct string comparison for legacy password");
       isPasswordValid = (password === user.password);
-      console.log(`Direct comparison result: ${isPasswordValid}`);
       
       // If direct comparison succeeded, upgrade to hashed password
       if (isPasswordValid) {
-        console.log("Upgrading legacy password to hashed version");
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
         user.password = hashedPassword;
         await user.save();
-        console.log("Password successfully upgraded to bcrypt hash");
       }
     }
     
     if (!isPasswordValid) {
-      console.log("Authentication failed: Invalid password");
       return res.status(401).json({ message: 'Invalid credentials' });
     }
     
-    // Authentication successful - continue with token generation
-    console.log("Authentication successful");
+    // Authentication successful
     
     // Update last activity
     user.lastActivity = new Date();

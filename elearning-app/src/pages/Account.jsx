@@ -119,7 +119,7 @@ function Account() {
               <span>{user.role}</span>
             </div>
             <div className="detail-item">
-              <span className="label">Member Since:</span>
+              <span className="label">Registration Date</span>
               <span>{user.joinDate}</span>
             </div>
           </div>

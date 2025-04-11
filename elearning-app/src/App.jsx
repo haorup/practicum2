@@ -9,7 +9,7 @@ import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import AuthService from './services/AuthService'
 import Account from './pages/Account'
-import { UserProvider } from './context/UserContext'
+import { UserProvider, useUser } from './context/UserContext'
 import { useEffect } from 'react'
 
 // Protected route component
@@ -23,6 +23,20 @@ const PrivateRoute = ({ children }) => {
   }, [location, isAuthenticated]);
   
   return isAuthenticated ? children : <Navigate to="/login" state={{ from: location }} />;
+};
+
+// Admin-only route component
+const AdminRoute = ({ children }) => {
+  const isAuthenticated = AuthService.isAuthenticated();
+  const user = AuthService.getCurrentUser();
+  const isAdmin = user && user.role === 'ADMIN';
+  const location = useLocation();
+  
+  if (!isAuthenticated) {
+    return <Navigate to="/login" state={{ from: location }} />;
+  }
+  
+  return isAdmin ? children : <Navigate to="/account" />;
 };
 
 function App() {
@@ -46,9 +60,16 @@ function App() {
           </PrivateRoute>
         }>
           <Route path="courses" element={<CoursePage />} />
-          <Route path="assignments" element={<AssignmentPage />} />
-          <Route path="quizzes" element={<QuizPage />} />
-          <Route path="users" element={<UserPage />} />
+          <Route path="assignments" element={<Navigate to="/courses" />} />
+          <Route path="assignments/:courseNumber" element={<AssignmentPage />} />
+          <Route path="quizzes" element={<Navigate to="/courses" />} />
+          <Route path="quizzes/:courseNumber" element={<QuizPage />} />
+          {/* Make Users page admin-only */}
+          <Route path="users" element={
+            <AdminRoute>
+              <UserPage />
+            </AdminRoute>
+          } />
           <Route path="enrollments" element={<EnrollmentPage />} />
           <Route path="account" element={<Account />} />
         </Route>

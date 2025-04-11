@@ -7,7 +7,6 @@ import quizRoutes from "./quiz/routes.js";
 import userRoutes from "./user/routes.js";
 import enrollmentRoutes from "./enrollment/routes.js";
 import authRoutes from './auth/authRoutes.js';
-import { verifyToken } from './middleware/authMiddleware.js';
 import dotenv from 'dotenv';
 
 // Load environment variables
@@ -15,13 +14,21 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// Configure CORS properly - this needs to come before other middleware
+app.use(cors({
+  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-user-role'],
+  credentials: true,
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+}));
+
+// Parse JSON bodies
 app.use(express.json());
 
 // Connect to MongoDB Atlas with proper ServerAPI configuration
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/elearning';
-// const MONGODB_URI = 'mongodb://localhost:27017/elearning';
 
 // Configure MongoDB connection with ServerAPI options
 mongoose.connect(MONGODB_URI, {
@@ -32,34 +39,21 @@ mongoose.connect(MONGODB_URI, {
   }
 })
 .then(() => {
-  console.log('Initial connection successful');
-  return mongoose.connection.db.admin().command({ ping: 1 });
-})
-.then(() => {
-  console.log('Connected to MongoDB Atlas successfully! ');
-  // Log database name to confirm we're connected to the right database
-  console.log(`Connected to database: ${mongoose.connection.name}`);
+  console.log('Connected to MongoDB successfully');
 })
 .catch(err => {
-  console.error('MongoDB Atlas connection error:', err);
-  // More detailed error information
-  if (err.name === 'MongoServerSelectionError') {
-    console.error('Could not select a MongoDB server. Check your network or connection string.');
-  }
-  // For debugging connection issues
-  console.error('Connection string used (without password):', 
-    MONGODB_URI.replace(/:([^:@]+)@/, ':****@'));
+  console.error('MongoDB connection error:', err);
 });
 
 // Public routes
 app.use('/api/auth', authRoutes);
 
 // Protected routes
-app.use(verifyToken, userRoutes);
-app.use(verifyToken, courseRoutes);
-app.use(verifyToken, assignmentRoutes);
-app.use(verifyToken, quizRoutes);
-app.use(verifyToken, enrollmentRoutes);
+app.use(userRoutes);
+app.use(courseRoutes);
+app.use(assignmentRoutes);
+app.use(quizRoutes);
+app.use(enrollmentRoutes);
 
 // Start server
 const PORT = process.env.PORT || 4000;

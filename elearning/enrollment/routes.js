@@ -1,15 +1,16 @@
 import express from "express";
 import * as dao from "./dao.js";
+import { verifyToken, isAdmin, isFacultyOrAdmin, filterEnrollmentsByRole } from "../middleware/authMiddleware.js";
+import Enrollment from "./model.js";
 
 const router = express.Router();
 
-// Create a new enrollment with transaction support
-router.post("/api/enrollments", async (req, res) => {
+// Create a new enrollment - Admin only
+router.post("/api/enrollments", verifyToken, isAdmin, async (req, res) => {
   try {
     const newEnrollment = await dao.createEnrollment(req.body);
     res.status(201).json(newEnrollment);
   } catch (error) {
-    console.error("Enrollment creation failed:", error);
     res.status(400).json({ 
       message: error.message,
       transactionFailed: true
@@ -17,23 +18,40 @@ router.post("/api/enrollments", async (req, res) => {
   }
 });
 
-// Get all enrollments
-router.get("/api/enrollments", async (req, res) => {
+// Get all enrollments - All authenticated users, but filter based on role
+router.get("/api/enrollments", verifyToken, filterEnrollmentsByRole, async (req, res) => {
   try {
-    const enrollments = await dao.findAllEnrollments();
+    let enrollments;
+    
+    if (req.userRole === 'STUDENT') {
+      // Students can only see their own enrollments
+      enrollments = await dao.findEnrollmentsByUser(req.userId);
+    } else {
+      // Faculty and admin can see all
+      enrollments = await dao.findAllEnrollments();
+    }
+    
     res.status(200).json(enrollments);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 });
 
-// Get enrollment by ID
-router.get("/api/enrollments/:id", async (req, res) => {
+// Get enrollment by ID - All authenticated users, but verify ownership for students
+router.get("/api/enrollments/:id", verifyToken, async (req, res) => {
   try {
     const enrollment = await dao.findEnrollmentById(req.params.id);
+    
     if (!enrollment) {
       return res.status(404).json({ message: "Enrollment not found" });
     }
+    
+    // Students can only access their own enrollments
+    if (req.userRole === 'STUDENT' && 
+        enrollment.user._id.toString() !== req.userId) {
+      return res.status(403).json({ message: "Access denied" });
+    }
+    
     res.status(200).json(enrollment);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -90,8 +108,8 @@ router.get("/api/courses/:courseId/has-enrollments", async (req, res) => {
   }
 });
 
-// Update enrollment with transaction support
-router.put("/api/enrollments/:id", async (req, res) => {
+// Update enrollment - Admin only
+router.put("/api/enrollments/:id", verifyToken, isAdmin, async (req, res) => {
   try {
     const updatedEnrollment = await dao.updateEnrollment(req.params.id, req.body);
     if (!updatedEnrollment) {
@@ -99,7 +117,6 @@ router.put("/api/enrollments/:id", async (req, res) => {
     }
     res.status(200).json(updatedEnrollment);
   } catch (error) {
-    console.error("Enrollment update failed:", error);
     res.status(400).json({ 
       message: error.message,
       transactionFailed: true
@@ -107,8 +124,8 @@ router.put("/api/enrollments/:id", async (req, res) => {
   }
 });
 
-// Delete enrollment with transaction support
-router.delete("/api/enrollments/:id", async (req, res) => {
+// Delete enrollment - Admin only
+router.delete("/api/enrollments/:id", verifyToken, isAdmin, async (req, res) => {
   try {
     const deletedEnrollment = await dao.deleteEnrollment(req.params.id);
     if (!deletedEnrollment) {
@@ -116,7 +133,6 @@ router.delete("/api/enrollments/:id", async (req, res) => {
     }
     res.status(200).json({ message: "Enrollment deleted successfully" });
   } catch (error) {
-    console.error("Enrollment deletion failed:", error);
     res.status(500).json({ 
       message: error.message,
       transactionFailed: true
@@ -140,7 +156,6 @@ router.post("/api/courses/:courseId/bulk-enroll", async (req, res) => {
       results
     });
   } catch (error) {
-    console.error("Bulk enrollment failed:", error);
     res.status(500).json({ 
       message: error.message,
       transactionFailed: true

@@ -1,14 +1,24 @@
 import { useState, useEffect } from 'react'
 import { getUsers, createUser, updateUser, deleteUser } from '../services/userService'
+import { useUser } from '../context/UserContext'
+import { useNavigate } from 'react-router-dom'
 
 function UserPage() {
   const [users, setUsers] = useState([])
   const [currentUser, setCurrentUser] = useState({ firstName: '', lastName: '', email: '', role: 'STUDENT' })
   const [editing, setEditing] = useState(false)
+  const { user: loggedInUser } = useUser();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    fetchUsers()
-  }, [])
+    // Double-check that only admins can access this page
+    if (!loggedInUser || loggedInUser.role !== 'ADMIN') {
+      navigate('/account');
+      return;
+    }
+    
+    fetchUsers();
+  }, [loggedInUser, navigate])
 
   const fetchUsers = async () => {
     try {
@@ -82,6 +92,11 @@ function UserPage() {
   return (
     <div className="page-container">
       <h2>Users</h2>
+      
+      {/* Role indicator */}
+      <div className="role-indicator">
+        <p className="role-badge admin">Administrator View (Full Access)</p>
+      </div>
       
       <form onSubmit={handleSubmit} className="form">
         <h3>{editing ? 'Edit User' : 'Add New User'}</h3>

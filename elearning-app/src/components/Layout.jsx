@@ -1,5 +1,6 @@
 import { Outlet, NavLink, useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext'
+import '../styles/Layout.css' // Import the CSS file
 
 function Layout() {
   const navigate = useNavigate();
@@ -8,6 +9,15 @@ function Layout() {
   const handleLogout = () => {
     logout();
     navigate('/login');
+  };
+
+  // Function to handle clicking on Users tab
+  const handleUsersClick = (e) => {
+    // If user is not admin, prevent the default navigation and redirect to account page
+    if (user && user.role !== 'ADMIN') {
+      e.preventDefault();
+      navigate('/account');
+    }
   };
 
   return (
@@ -29,9 +39,9 @@ function Layout() {
         <nav>
           <ul>
             <li><NavLink to="/courses">Courses</NavLink></li>
-            <li><NavLink to="/assignments">Assignments</NavLink></li>
-            <li><NavLink to="/quizzes">Quizzes</NavLink></li>
-            <li><NavLink to="/users">Users</NavLink></li>
+            {/* Removed Assignments link from navigation menu */}
+            {/* Add click handler to Users tab */}
+            <li><NavLink to="/users" onClick={handleUsersClick}>Users</NavLink></li>
             <li><NavLink to="/enrollments">Enrollments</NavLink></li>
             <li><NavLink to="/account">My Account</NavLink></li>
           </ul>

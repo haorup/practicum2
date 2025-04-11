@@ -12,7 +12,8 @@ export const createCourse = async (course) => {
 
 export const findAllCourses = async () => {
   try {
-    return await Course.find();
+    // Always populate instructor information
+    return await Course.find().populate('instructor', 'firstName lastName username email');
   } catch (error) {
     throw new Error(`Error finding courses: ${error.message}`);
   }
@@ -20,7 +21,7 @@ export const findAllCourses = async () => {
 
 export const findCourseById = async (id) => {
   try {
-    return await Course.findById(id);
+    return await Course.findById(id).populate('instructor', 'firstName lastName username email');
   } catch (error) {
     throw new Error(`Error finding course by ID: ${error.message}`);
   }
