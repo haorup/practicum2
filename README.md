@@ -109,7 +109,7 @@ The backend provides the following main API endpoints:
 - **Admin**: 
   - Username: admin_johnson
   - Password: defaultPassword123
-- **Instructor**:
+- **Faculty**:
    - Username: prof_williams
    - Password: defaultPassword123
 - **Student**:
