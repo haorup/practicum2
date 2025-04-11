@@ -117,3 +117,14 @@ npm start
 cd elearning-app
 npm run dev
 ```
+
+### Usernames and passwords for testing:
+- **Admin**: 
+  - Username: admin_johnson
+  - Password: defaultPassword123
+- **Instructor**:
+   - Username: prof_williams
+   - Password: defaultPassword123
+- **Student**:
+   - Username: emma_smith
+   - Password: defaultPassword123
