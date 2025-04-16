@@ -52,9 +52,9 @@ app.use('/api/auth', authRoutes);
 // Protected routes
 app.use('/api', userRoutes);
 app.use('/api', courseRoutes);
-app.use('/api', assignmentRoutes);
-app.use('/api', quizRoutes);
-app.use('/api', enrollmentRoutes);
+app.use(assignmentRoutes);
+app.use(quizRoutes);
+app.use(enrollmentRoutes);
 app.use('/api/analytics', analyticsRoutes);
 
 // Start server
