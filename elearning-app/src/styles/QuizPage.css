@@ -34,6 +34,15 @@
   background-color: var(--primary-dark);
 }
 
+.view-button {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.view-button:hover {
+  background-color: #138496;
+}
+
 .error-message {
   color: #721c24;
   background-color: #f8d7da;

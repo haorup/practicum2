@@ -6,6 +6,7 @@ import { useUser } from '../context/UserContext'
 import { FaEdit, FaTrash } from 'react-icons/fa'
 import '../styles/EnrollmentPage.css' // Reuse role badge styles
 import '../styles/QuizPage.css' // Import the QuizPage specific styles
+import QuizModal from '../components/QuizModal' // Import the new QuizModal component
 
 function QuizPage() {
   const [quizzes, setQuizzes] = useState([])
@@ -32,6 +33,9 @@ function QuizPage() {
   const { courseNumber } = useParams()
   const navigate = useNavigate()
   const { user: currentUser } = useUser()
+  // New state for the modal
+  const [selectedQuiz, setSelectedQuiz] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     // Check if user is logged in
@@ -209,6 +213,18 @@ function QuizPage() {
   const canModifyQuizzes = currentUser && 
     (currentUser.role === 'ADMIN' || currentUser.role === 'FACULTY');
 
+  // Add new function to handle opening the modal
+  const handleViewQuiz = (quiz) => {
+    setSelectedQuiz(quiz);
+    setIsModalOpen(true);
+  }
+
+  // Add function to close the modal
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedQuiz(null);
+  }
+
   return (
     <div className="page-container">
       <div className="page-header">
@@ -357,7 +373,7 @@ function QuizPage() {
                 <th>Time Limit</th>
                 <th>Points</th>
                 <th>Published</th>
-                {canModifyQuizzes && <th>Actions</th>}
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -369,33 +385,49 @@ function QuizPage() {
                   <td>{quiz.timeLimit} min</td>
                   <td>{quiz.points}</td>
                   <td>{quiz.published ? 'Yes' : 'No'}</td>
-                  {canModifyQuizzes && (
-                    <td>
-                      <button 
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleEdit(quiz);
-                        }}
-                        className="icon-button edit-icon"
-                        title="Edit quiz"
-                      >
-                        <FaEdit />
-                      </button>
-                      <button 
-                        onClick={() => handleDelete(quiz._id)}
-                        className="icon-button delete-icon"
-                        title="Delete quiz"
-                      >
-                        <FaTrash />
-                      </button>
-                    </td>
-                  )}
+                  <td>
+                    {/* Add View button for all users */}
+                    <button 
+                      onClick={() => handleViewQuiz(quiz)}
+                      className="action-button view-button"
+                    >
+                      View
+                    </button>
+                    
+                    {canModifyQuizzes && (
+                      <>
+                        <button 
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleEdit(quiz);
+                          }}
+                          className="action-button edit-button"
+                        >
+                          Edit
+                        </button>
+                        <button 
+                          onClick={() => handleDelete(quiz._id)}
+                          className="action-button delete-button"
+                        >
+                          Delete
+                        </button>
+                      </>
+                    )}
+                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
         )}
       </div>
+      
+      {/* Render the QuizModal when isModalOpen is true */}
+      {isModalOpen && selectedQuiz && (
+        <QuizModal 
+          quiz={selectedQuiz} 
+          onClose={handleCloseModal} 
+        />
+      )}
     </div>
   );
 }
