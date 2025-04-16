@@ -20,6 +20,9 @@ function Layout() {
     }
   };
 
+  // Check if user is admin
+  const isAdmin = user && user.role === 'ADMIN';
+
   return (
     <div className="app-container">
       <header>
@@ -38,6 +41,8 @@ function Layout() {
       <div className="content-container">
         <nav>
           <ul>
+            {/* Only show Dashboard to admin users */}
+            {isAdmin && <li><NavLink to="/dashboard">Dashboard</NavLink></li>}
             <li><NavLink to="/courses">Courses</NavLink></li>
             {/* Removed Assignments link from navigation menu */}
             {/* Add click handler to Users tab */}

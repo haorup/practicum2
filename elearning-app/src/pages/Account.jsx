@@ -61,7 +61,7 @@ function Account() {
         <div className="account-header">
           <h3>Profile Information</h3>
           <div className="action-buttons">
-            {!isEditing && <button className="edit-button" onClick={handleEditClick}>Edit Profile</button>}
+            
             <button className="logout-button" onClick={handleLogout}>Log Out</button>
           </div>
         </div>
