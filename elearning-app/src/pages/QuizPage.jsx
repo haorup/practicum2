@@ -3,6 +3,7 @@ import { getQuizzes, createQuiz, updateQuiz, deleteQuiz } from '../services/quiz
 import { getCourses, getCourse } from '../services/courseService'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext'
+import { FaEdit, FaTrash } from 'react-icons/fa'
 import '../styles/EnrollmentPage.css' // Reuse role badge styles
 import '../styles/QuizPage.css' // Import the QuizPage specific styles
 
@@ -375,15 +376,17 @@ function QuizPage() {
                           e.preventDefault();
                           handleEdit(quiz);
                         }}
-                        className="action-button edit-button"
+                        className="icon-button edit-icon"
+                        title="Edit quiz"
                       >
-                        Edit
+                        <FaEdit />
                       </button>
                       <button 
                         onClick={() => handleDelete(quiz._id)}
-                        className="action-button delete-button"
+                        className="icon-button delete-icon"
+                        title="Delete quiz"
                       >
-                        Delete
+                        <FaTrash />
                       </button>
                     </td>
                   )}

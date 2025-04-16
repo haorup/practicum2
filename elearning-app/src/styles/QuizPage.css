@@ -124,3 +124,32 @@
 .form button[type="button"]:hover {
   background-color: #5a6268;
 }
+
+
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.edit-icon {
+  color: #4a90e2;
+}
+
+.delete-icon {
+  color: #e74c3c;
+}
+
+.icon-button:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.05);
+}
