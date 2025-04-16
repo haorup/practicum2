@@ -1,0 +1,137 @@
+/* Main layout styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styling - Canvas-like red */
+.app-container header {
+  background-color: #c90016; /* Canvas-like red */
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.app-container header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info span {
+  font-size: 0.9rem;
+}
+
+.user-info button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.user-info button:hover {
+  background-color: white;
+  color: #c90016; /* Canvas-like red */
+}
+
+.user-info a {
+  color: white;
+  text-decoration: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 3px;
+  border: 1px solid white;
+}
+
+.user-info a:hover {
+  background-color: white;
+  color: #c90016; /* Canvas-like red */
+}
+
+/* Content container */
+.content-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+/* Navigation sidebar - darker red/maroon */
+.app-container nav {
+  background-color: #900010; /* Darker red */
+  width: 200px;
+  padding: 1.5rem 0;
+  color: white;
+}
+
+.app-container nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  padding: 0;
+}
+
+.app-container nav a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.app-container nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left-color: #ff9e9e; /* Light red */
+}
+
+.app-container nav a.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-left-color: white;
+  font-weight: 500;
+}
+
+/* Main content area */
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+/* Button styling for consistent look */
+button {
+  background-color: #c90016; /* Canvas-like red */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #a50012; /* Darker red on hover */
+}
+
+button.secondary {
+  background-color: #6c757d;
+}
+
+button.secondary:hover {
+  background-color: #5a6268;
+}

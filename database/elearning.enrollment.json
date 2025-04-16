@@ -1,0 +1,224 @@
+[{
+  "_id": {
+    "$oid": "67f6ee95b435605cc9047280"
+  },
+  "user": {
+    "$oid": "67ef53e352126ab8ed55d753"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d31f"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-09T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f74cc0fce4bc9fb3cb0457"
+  },
+  "user": {
+    "$oid": "67ef53e352126ab8ed55d753"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d320"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f74cccfce4bc9fb3cb045c"
+  },
+  "user": {
+    "$oid": "67ef53e352126ab8ed55d759"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d31f"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f74cd2fce4bc9fb3cb0461"
+  },
+  "user": {
+    "$oid": "67ef53e352126ab8ed55d757"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d323"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f74cd9fce4bc9fb3cb0466"
+  },
+  "user": {
+    "$oid": "67ef53e352126ab8ed55d75a"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d326"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f74cdefce4bc9fb3cb046b"
+  },
+  "user": {
+    "$oid": "67ef53e352126ab8ed55d760"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d32c"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f74ce7fce4bc9fb3cb0470"
+  },
+  "user": {
+    "$oid": "67ef53e352126ab8ed55d75d"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d329"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f74cf3fce4bc9fb3cb0475"
+  },
+  "user": {
+    "$oid": "67ef53e352126ab8ed55d761"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d32f"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f74cfffce4bc9fb3cb047a"
+  },
+  "user": {
+    "$oid": "67f61d0dc9d47b0d3d25a207"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d332"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f74d0cfce4bc9fb3cb047f"
+  },
+  "user": {
+    "$oid": "67ef53e352126ab8ed55d760"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d324"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f74d11fce4bc9fb3cb0484"
+  },
+  "user": {
+    "$oid": "67ef53e352126ab8ed55d757"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d327"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f74d19fce4bc9fb3cb0489"
+  },
+  "user": {
+    "$oid": "67ef53e352126ab8ed55d756"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d32e"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f74d24fce4bc9fb3cb048e"
+  },
+  "user": {
+    "$oid": "67ef53e352126ab8ed55d75a"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d324"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f74d2cfce4bc9fb3cb0493"
+  },
+  "user": {
+    "$oid": "67ef53e352126ab8ed55d756"
+  },
+  "course": {
+    "$oid": "67f6ee5b30bcd5365624d321"
+  },
+  "enrollmentDate": {
+    "$date": "2025-04-10T00:00:00.000Z"
+  },
+  "status": "ACTIVE",
+  "__v": 0
+}]

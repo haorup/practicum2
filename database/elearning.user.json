@@ -1,0 +1,317 @@
+[{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d753"
+  },
+  "username": "emma_smith",
+  "password": "$2b$10$BR09Da6O/NJSipx9ipIcv.FCWC.8peKHy0EAXVhuWCgVyAH07A0n6",
+  "firstName": "Em",
+  "lastName": "Smith",
+  "email": "emma.smith@university.edu",
+  "dob": {
+    "$date": "1994-09-23T00:00:00.000Z"
+  },
+  "userID": 1002,
+  "role": "STUDENT",
+  "lastActivity": {
+    "$date": "2023-11-06T10:15:45.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d754"
+  },
+  "username": "prof_williams",
+  "password": "$2b$10$sIAjuT5lsTahVdSwRYq44um8LmMPIYrtPp3WhYi.52eylSq3xhPSK",
+  "firstName": "Robert",
+  "lastName": "Williams",
+  "email": "r.williams@university.edu",
+  "dob": "1975-07-18",
+  "userID": 2001,
+  "role": "FACULTY",
+  "lastActivity": "2023-11-05T16:45:10Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d755"
+  },
+  "username": "admin_johnson",
+  "password": "$2b$10$wTBeKgzH4k1fwDvBTUXXveLGKkLzNhhgAV0TLNwR8pAiM.0TjS.4C",
+  "firstName": "Patricia",
+  "lastName": "Johnson",
+  "email": "p.johnson@university.edu",
+  "dob": "1980-12-10",
+  "userID": 3001,
+  "role": "ADMIN",
+  "lastActivity": "2023-11-06T09:30:00Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d756"
+  },
+  "username": "sarah_miller",
+  "password": "$2b$10$DSXbAgNk961/hLhJ51w45eVUTWVCTeiAXMYZFiQBrGlrS1Kyl9Fcq",
+  "firstName": "Sarah",
+  "lastName": "Miller",
+  "email": "s.miller@university.edu",
+  "dob": "1997-03-28",
+  "userID": 1003,
+  "role": "STUDENT",
+  "lastActivity": "2023-11-04T18:22:15Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d757"
+  },
+  "username": "david_brown",
+  "password": "$2b$10$8Ri5lFmiSxIZIv7/wCu2Z.o.NCyFlgPxWaQQy.bp6jEHFHZlLV8X.",
+  "firstName": "David",
+  "lastName": "Brown",
+  "email": "d.brown@university.edu",
+  "dob": "1996-11-15",
+  "userID": 1004,
+  "role": "STUDENT",
+  "lastActivity": "2023-11-05T20:10:05Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d758"
+  },
+  "username": "prof_davis",
+  "password": "$2b$10$xfdwx9F70/txuNj3dm6HmeX1f/jYYfQBg/YbHHOSV/.OIKBX7G7xe",
+  "firstName": "Jennifer",
+  "lastName": "Davis",
+  "email": "j.davis@university.edu",
+  "dob": "1978-04-22",
+  "userID": 2002,
+  "role": "FACULTY",
+  "lastActivity": "2023-11-06T14:15:30Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d759"
+  },
+  "username": "michelle_wilson",
+  "password": "$2b$10$t71/4WewO69wXw9awi.GCOrOgGNLgFnuPdxl3smFj/fGpmYKC/RwW",
+  "firstName": "Michelle",
+  "lastName": "Wilson",
+  "email": "m.wilson@university.edu",
+  "dob": "1994-02-14",
+  "userID": 1005,
+  "role": "STUDENT",
+  "lastActivity": "2023-11-05T11:45:22Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d75a"
+  },
+  "username": "james_taylor",
+  "password": "$2b$10$se108zNvzCPwo1t4HyVhduwxKtqWTelFgzChT.i2i9bgqxQKGJil.",
+  "firstName": "James",
+  "lastName": "Taylor",
+  "email": "j.taylor@university.edu",
+  "dob": "1993-06-30",
+  "userID": 1006,
+  "role": "STUDENT",
+  "lastActivity": "2023-11-06T08:30:15Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d75b"
+  },
+  "username": "prof_martin",
+  "password": "$2b$10$OUAeAAsr5M/aCK8ajfIqXe5iAUnXDwkyrrJbZs22/xBrL6F/AiBX2",
+  "firstName": "Richard",
+  "lastName": "Martin",
+  "email": "r.martin@university.edu",
+  "dob": "1970-01-25",
+  "userID": 2003,
+  "role": "FACULTY",
+  "lastActivity": "2023-11-05T15:20:45Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d75c"
+  },
+  "username": "admin_garcia",
+  "password": "$2b$10$7zyuASzc8MtMqcyUFbTV/ug1ydp0VKr1/htZewW1B370p4Z8O2Rn6",
+  "firstName": "Maria",
+  "lastName": "Garcia",
+  "email": "m.garcia@university.edu",
+  "dob": "1983-08-12",
+  "userID": 3002,
+  "role": "ADMIN",
+  "lastActivity": "2023-11-06T11:10:00Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d75d"
+  },
+  "username": "elizabeth_harris",
+  "password": "$2b$10$F3AFaEZU0cvtK/3ob29b7Oitk/03PDeW8eQvXuXDrEMfjKwMNZiQ.",
+  "firstName": "Elizabeth",
+  "lastName": "Harris",
+  "email": "e.harris@university.edu",
+  "dob": "1998-09-05",
+  "userID": 1007,
+  "role": "STUDENT",
+  "lastActivity": "2023-11-04T19:35:10Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d75e"
+  },
+  "username": "michael_clark",
+  "password": "$2b$10$kLnbrDqpgSbK1IgO1aIWROQh2MWc6RSLcM1kiBNOMdVLU7P3IjfMu",
+  "firstName": "Michael",
+  "lastName": "Clark",
+  "email": "m.clark@university.edu",
+  "dob": "1995-12-03",
+  "userID": 1008,
+  "role": "STUDENT",
+  "lastActivity": "2023-11-05T22:05:30Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d75f"
+  },
+  "username": "prof_robinson",
+  "password": "$2b$10$gKcVsX/WWFwroUQXMfGskOQvFkSOE5ibHibO6n4qyxoKn.biKe/uy",
+  "firstName": "Susan",
+  "lastName": "Robinson",
+  "email": "s.robinson@university.edu",
+  "dob": "1972-10-18",
+  "userID": 2004,
+  "role": "FACULTY",
+  "lastActivity": "2023-11-06T13:25:40Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d760"
+  },
+  "username": "thomas_wright",
+  "password": "$2b$10$WZi8t.EZW2270HsqR.XYiuznpqfRHlWF/QEuvmmV8a5/I7UaR.MHC",
+  "firstName": "Thomas",
+  "lastName": "Wright",
+  "email": "t.wright@university.edu",
+  "dob": "1996-07-22",
+  "userID": 1009,
+  "role": "STUDENT",
+  "lastActivity": "2023-11-05T12:50:15Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d761"
+  },
+  "username": "lisa_hall",
+  "password": "$2b$10$ETUUSo8JereYuW6FWB1Y3uOjuCcn2q3fF49uewURcadJSNneSdosW",
+  "firstName": "Lisa",
+  "lastName": "Hall",
+  "email": "l.hall@university.edu",
+  "dob": "1997-04-11",
+  "userID": 1010,
+  "role": "STUDENT",
+  "lastActivity": "2023-11-04T16:40:22Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d762"
+  },
+  "username": "prof_adams",
+  "password": "$2b$10$seN.jIA5nX7Ms8N5rBwPbOaVfbpyB7bybMqjD990qEGV4Y4Ma3xSK",
+  "firstName": "Charles",
+  "lastName": "Adams",
+  "email": "c.adams@university.edu",
+  "dob": "1968-03-15",
+  "userID": 2005,
+  "role": "FACULTY",
+  "lastActivity": "2023-11-05T17:35:10Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d763"
+  },
+  "username": "karen_young",
+  "password": "$2b$10$MTYTRw816nFS6/CjjTPe.uF5LcvLAvGHIItTG7SXM/Yg8sCVyp7c2",
+  "firstName": "Karen",
+  "lastName": "Young",
+  "email": "k.young@university.edu",
+  "dob": "1994-10-30",
+  "userID": 1011,
+  "role": "STUDENT",
+  "lastActivity": "2023-11-06T09:10:25Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d764"
+  },
+  "username": "daniel_allen",
+  "password": "$2b$10$APLdpf/hp2SninZ/LFB25OGUcboG.4wiHqJKYlbm8pSE/HAY0QscS",
+  "firstName": "Daniel",
+  "lastName": "Allen",
+  "email": "d.allen@university.edu",
+  "dob": "1995-08-17",
+  "userID": 1012,
+  "role": "STUDENT",
+  "lastActivity": "2023-11-05T21:15:05Z"
+},
+{
+  "_id": {
+    "$oid": "67ef53e352126ab8ed55d765"
+  },
+  "username": "admin_evans",
+  "password": "$2b$10$n6JH1QRhLddvOZwWyz2tf.r5Wi8VNvr8tw6F3I06ItNRKEVDmWrdW",
+  "firstName": "William",
+  "lastName": "Evans",
+  "email": "w.evans@university.edu",
+  "dob": "1981-05-05",
+  "userID": 3003,
+  "role": "ADMIN",
+  "lastActivity": "2023-11-06T10:45:30Z"
+},
+{
+  "_id": {
+    "$oid": "67f61d0dc9d47b0d3d25a207"
+  },
+  "username": "john.d",
+  "password": "$2b$10$iVEVyWaQpO34kvrgTXrRbONjNDzjb8/itiOanYvTlHJtOxi8i6Uxu",
+  "firstName": "John",
+  "email": "john.d@example.edu",
+  "lastName": "Doe",
+  "userID": 182541322,
+  "role": "STUDENT",
+  "lastActivity": {
+    "$date": "2025-04-09T07:09:01.322Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f61d2ec9d47b0d3d25a20a"
+  },
+  "username": "mikey.j",
+  "password": "$2b$10$MZtG.eOhlK0rRoRQcgxRWecDOQaLUvOBGUnKH4g.glH7ZBMf9bJ0q",
+  "firstName": "mikey",
+  "email": "mikey.j@example.edu",
+  "lastName": "jackson",
+  "userID": 182574313,
+  "role": "FACULTY",
+  "lastActivity": {
+    "$date": "2025-04-09T07:09:34.313Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f7342afce4bc9fb3caf102"
+  },
+  "username": "jason.z",
+  "password": "$2b$10$G9p7.F7wPZUBvQVGml/qheJ.H6ZeH887UtfZKMJ6rDBEGNsFawpre",
+  "firstName": "jason",
+  "email": "jason.z@example.edu",
+  "lastName": "zaon",
+  "userID": 182574314,
+  "role": "STUDENT",
+  "lastActivity": {
+    "$date": "2025-04-10T04:41:03.071Z"
+  }
+}]
