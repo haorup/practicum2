@@ -54,7 +54,7 @@ function UserPage() {
       const userToSubmit = {
         ...currentUser,
         username: currentUser.email.split('@')[0] || `user_${Date.now()}`,
-        password: 'defaultPassword123',
+        // password: 'defaultPassword123',
         userID: parseInt(Date.now().toString().slice(-9)), // Create numeric ID from timestamp
         lastActivity: new Date()
       };

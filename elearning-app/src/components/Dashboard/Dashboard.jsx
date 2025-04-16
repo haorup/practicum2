@@ -137,12 +137,12 @@ const Dashboard = () => {
         <div className="stat-card">
           <h3>Total Courses</h3>
           <p>{courseData?.totalCourses || 0}</p>
-          <small>Active Courses: {courseData?.activeCourses || 0}</small>
+          {/* <small>Active Courses: {courseData?.activeCourses || 0}</small> */}
         </div>
         <div className="stat-card">
           <h3>Credit Types</h3>
           <p>{courseData?.creditLabels?.length || 0}</p>
-          <small>Total Courses: {courseData?.totalCourses || 0}</small>
+          {/* <small>Total Courses: {courseData?.totalCourses || 0}</small> */}
         </div>
       </div>
 
