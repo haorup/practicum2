@@ -125,20 +125,21 @@
   background-color: #5a6268;
 }
 
-
-
 .icon-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 4px;
+  background: none;
   border: none;
-  background-color: transparent;
+  color: var(--primary-color);
   cursor: pointer;
-  transition: all 0.2s;
-  padding: 0;
+  font-size: 1.2rem;
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.icon-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--secondary-color);
 }
 
 .edit-icon {

@@ -3,6 +3,7 @@ import { getEnrollments, createEnrollment, updateEnrollment, deleteEnrollment } 
 import { getUsers } from '../services/userService'
 import { getCourses } from '../services/courseService'
 import { useUser } from '../context/UserContext'
+import { FaEdit, FaTrash } from 'react-icons/fa'
 import '../styles/EnrollmentPage.css'
 
 function EnrollmentPage() {
@@ -304,8 +305,8 @@ function EnrollmentPage() {
                     <td>{enrollment.status}</td>
                     {canModifyEnrollments && (
                       <td>
-                        <button onClick={() => handleEdit(enrollment)}>Edit</button>
-                        <button onClick={() => handleDelete(enrollment._id)}>Delete</button>
+                        <FaEdit onClick={() => handleEdit(enrollment)}/>
+                        <FaTrash onClick={() => handleDelete(enrollment._id)}/>
                       </td>
                     )}
                   </tr>

@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { getUsers, createUser, updateUser, deleteUser } from '../services/userService'
 import { useUser } from '../context/UserContext'
 import { useNavigate } from 'react-router-dom'
+import { FaEdit, FaTrash } from 'react-icons/fa'
+import '../styles/EnrollmentPage.css'
 
 function UserPage() {
   const [users, setUsers] = useState([])
@@ -172,8 +174,8 @@ function UserPage() {
                 <td>{user.email}</td>
                 <td>{user.role}</td>
                 <td>
-                  <button onClick={() => handleEdit(user)}>Edit</button>
-                  <button onClick={() => handleDelete(user._id)}>Delete</button>
+                  <FaEdit onClick={() => handleEdit(user)} />
+                  <FaTrash onClick={() => handleDelete(user._id)} />
                 </td>
               </tr>
             ))}

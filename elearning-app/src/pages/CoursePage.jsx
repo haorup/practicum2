@@ -5,6 +5,7 @@ import { useUser } from '../context/UserContext'
 import '../styles/EnrollmentPage.css' // Reuse the same styles for role badges
 import { useNavigate } from 'react-router-dom'
 import '../styles/QuizPage.css' // Import for view-button class
+import { FaClipboardList, FaBookOpen, FaEdit, FaTrash } from 'react-icons/fa' // Added edit and trash icons
 
 function CoursePage() {
   const [courses, setCourses] = useState([])
@@ -339,12 +340,12 @@ function CoursePage() {
                           (currentUser.role === 'FACULTY' && 
                            course.instructor && 
                            course.instructor._id === currentUser.id)) && (
-                          <button onClick={() => handleEdit(course)}>Edit</button>
+                          <FaEdit onClick={() => handleEdit(course)} />
                         )}
                         
                         {/* Only admins can delete courses */}
                         {canDeleteCourses && (
-                          <button onClick={() => handleDelete(course._id)}>Delete</button>
+                          <FaTrash onClick={() => handleDelete(course._id)} />
                         )}
                       </td>
                     )}
@@ -353,13 +354,13 @@ function CoursePage() {
                         onClick={() => handleViewQuizzes(course.number)}
                         className="view-button"
                       >
-                        View Quizzes
+                        <FaClipboardList /> Quizzes
                       </button>
                       <button 
                         onClick={() => handleViewAssignments(course.number)}
                         className="view-button"
                       >
-                        View Assignments
+                        <FaBookOpen /> Assignments
                       </button>
                     </td>
                   </tr>
