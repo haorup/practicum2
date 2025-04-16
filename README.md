@@ -8,7 +8,7 @@ This repository contains a full-stack e-learning platform with a Node.js/Express
 - `elearning-app/` - Latest Frontend web application (React/Vite)
 - `database/` - Sample data backup files for MongoDB database
 - `query/` - query files for Task 5 and Task 6
-- `documentation/` - Documentation files for milestone2: Task 3 ~ Task 6.
+- `documentation/` - Documentation files for milestone2: Task 3 ~ Task 8.
 
 ## Prerequisites
 
